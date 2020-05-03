@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Homeoptik</string>
+    <string name="rekomendasi">Rekomendasi</string>
+    <string name="kategori">Dashboard</string>
+    <string name="riwayat_belanja">Riwayat Belanja</string>
+    <string name="notifikasi">Notifikasi</string>
+    <string name="akun_saya">Akun Saya</string>
+    <string name="tampilan_home">Tampilan Home</string>
+
+</resources>
