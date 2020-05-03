@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">Artikel Optik Surya</string>
+    <string name="title_artikel">Tips Dan Trik Memilih Kacamata</string>
+
+    <array name="logo_artikel">
+
+        <item>@drawable/persegi</item>
+        <item>@drawable/hati</item>
+        <item>@drawable/oval</item>
+        <item>@drawable/bulat</item>
+        <item>@drawable/berlian</item>
+
+    </array>
+    <string-array name="nama_artikel">
+        <item>Tips Memilih Kacamata Untuk Wajah Persegi</item>
+        <item>Tips Memilih Kacamata Untuk Wajah Hati</item>
+        <item>Tips Memilih Kacamata Untuk Wajah Oval</item>
+        <item>Tips Memilih Kacamata Untuk Wajah Bulat</item>
+        <item>Tips Memilih Kacamata Untuk Wajah Berlian</item>
+
+    </string-array>
+
+    <string-array name="artikel">
+        <item>Kini kacamata bukan sekedar alat bantu baca atau pelindung dari radiasi sinar UV, tetapi juga bertambah fungsi sebagai elemen gaya seseorang. Sama halnya dengan pakaian, kacamata adalah ekspresi personal. Pemilihan warna dan desain kacamata akan menonjolkan kepribadian pemakainya. Terlepas dari itu, tak bisa dipungkiri ada kacamata yang terlihat cocok di wajah kita dan ada yang tidak. Warna kacamata yang kita pilih akan berpadu dengan warna kulit dan rambut, sehingga warna yang tepat akan memberikan kesan terbaik. Sementara bentuk bingkai yang sesuai akan menyempurnakan bentuk wajah dan menonjolkan fitur terbaik dari wajah Anda. Untuk mengetahui kacamata mana yang paling pas, kenalilah bentuk wajah Anda dengan bercermin atau ber-selfie ria. Beranikan diri bereksperimen dengan berbagai  warna dan bentuk bingkai kacamata. Saat pergi ke optik, ajak juga orang terdekat untuk dimintai pendapat. Sedikit pengetahuan mengenai bentuk wajah dan bentuk bingkai seperti yang berikut ini juga bisa membantu Anda memilih kacamata yang tepat. 1.	  Bentuk wajah persegi
+Ciri: Dahi lebar, garis rahang yang kuat, dan umumnya proporsional--baik vertikal maupun horizontal.
+Gunakan: Berbagai variasi bentuk bulat. Usahakan kacamata Anda lebih lebar dari tulang pipi Anda. Pilih bingkai dengan warna gelap atau warna-warna bold.
+Hindari: Warna-warna terang, bentuk-bentuk geometris atau persegi. Intinya, jangan memberikan wajah Anda terlalu banyak sudut.
+</item>
+        <item>Kini kacamata bukan sekedar alat bantu baca atau pelindung dari radiasi sinar UV, tetapi juga bertambah fungsi sebagai elemen gaya seseorang. Sama halnya dengan pakaian, kacamata adalah ekspresi personal. Pemilihan warna dan desain kacamata akan menonjolkan kepribadian pemakainya. Terlepas dari itu, tak bisa dipungkiri ada kacamata yang terlihat cocok di wajah kita dan ada yang tidak. Warna kacamata yang kita pilih akan berpadu dengan warna kulit dan rambut, sehingga warna yang tepat akan memberikan kesan terbaik. Sementara bentuk bingkai yang sesuai akan menyempurnakan bentuk wajah dan menonjolkan fitur terbaik dari wajah Anda. Untuk mengetahui kacamata mana yang paling pas, kenalilah bentuk wajah Anda dengan bercermin atau ber-selfie ria. Beranikan diri bereksperimen dengan berbagai  warna dan bentuk bingkai kacamata. Saat pergi ke optik, ajak juga orang terdekat untuk dimintai pendapat. Sedikit pengetahuan mengenai bentuk wajah dan bentuk bingkai seperti yang berikut ini juga bisa membantu Anda memilih kacamata yang tepat. 2.	Bentuk wajah hati
+Ciri: Dahi lebar, dagu runcing, dan tulang pipi yang tinggi.
+Gunakan: Bingkai tipis, berbentuk bulat atau oval, serta warna-warna terang dan ringan.
+Hindari: Warna gelap, desain dengan bingkai tebal di bagian atas atau kacamata dengan elemen dekoratif. Minimalkan perhatian ke bagian atas wajah.
+</item>
+        <item>Kini kacamata bukan sekedar alat bantu baca atau pelindung dari radiasi sinar UV, tetapi juga bertambah fungsi sebagai elemen gaya seseorang. Sama halnya dengan pakaian, kacamata adalah ekspresi personal. Pemilihan warna dan desain kacamata akan menonjolkan kepribadian pemakainya. Terlepas dari itu, tak bisa dipungkiri ada kacamata yang terlihat cocok di wajah kita dan ada yang tidak. Warna kacamata yang kita pilih akan berpadu dengan warna kulit dan rambut, sehingga warna yang tepat akan memberikan kesan terbaik. Sementara bentuk bingkai yang sesuai akan menyempurnakan bentuk wajah dan menonjolkan fitur terbaik dari wajah Anda. Untuk mengetahui kacamata mana yang paling pas, kenalilah bentuk wajah Anda dengan bercermin atau ber-selfie ria. Beranikan diri bereksperimen dengan berbagai  warna dan bentuk bingkai kacamata. Saat pergi ke optik, ajak juga orang terdekat untuk dimintai pendapat. Sedikit pengetahuan mengenai bentuk wajah dan bentuk bingkai seperti yang berikut ini juga bisa membantu Anda memilih kacamata yang tepat. Bentuk oval
+Ciri: Memiliki lengkung garis rahang yang lembut, bentuk yang sedikit runcing di dagu, dengan tulang pipi tinggi.
+Gunakan: Apapun! Warna gelap atau terang, berbagai bentuk bingkai, semua cocok!
+Hindari: Ukuran oversized yang akan membuat fitur wajah terbaik Anda tenggelam.
+</item>
+        <item>Kini kacamata bukan sekedar alat bantu baca atau pelindung dari radiasi sinar UV, tetapi juga bertambah fungsi sebagai elemen gaya seseorang. Sama halnya dengan pakaian, kacamata adalah ekspresi personal. Pemilihan warna dan desain kacamata akan menonjolkan kepribadian pemakainya. Terlepas dari itu, tak bisa dipungkiri ada kacamata yang terlihat cocok di wajah kita dan ada yang tidak. Warna kacamata yang kita pilih akan berpadu dengan warna kulit dan rambut, sehingga warna yang tepat akan memberikan kesan terbaik. Sementara bentuk bingkai yang sesuai akan menyempurnakan bentuk wajah dan menonjolkan fitur terbaik dari wajah Anda. Untuk mengetahui kacamata mana yang paling pas, kenalilah bentuk wajah Anda dengan bercermin atau ber-selfie ria. Beranikan diri bereksperimen dengan berbagai  warna dan bentuk bingkai kacamata. Saat pergi ke optik, ajak juga orang terdekat untuk dimintai pendapat. Sedikit pengetahuan mengenai bentuk wajah dan bentuk bingkai seperti yang berikut ini juga bisa membantu Anda memilih kacamata yang tepat. 4.	Bentuk wajah bulat
+Ciri: Pipi chubby, dahi luas, dan dagu bulat.
+Gunakan: Bentuk persegi atau banyak segi. Anda bisa bermain-main dengan bentuk-bentuk bingkai unik yang bersudut.
+Hindari: Bingkai sempit atau bentuk bulat, seperti kacamata bulat khas John Lennon.
+</item>
+        <item>Kini kacamata bukan sekedar alat bantu baca atau pelindung dari radiasi sinar UV, tetapi juga bertambah fungsi sebagai elemen gaya seseorang. Sama halnya dengan pakaian, kacamata adalah ekspresi personal. Pemilihan warna dan desain kacamata akan menonjolkan kepribadian pemakainya. Terlepas dari itu, tak bisa dipungkiri ada kacamata yang terlihat cocok di wajah kita dan ada yang tidak. Warna kacamata yang kita pilih akan berpadu dengan warna kulit dan rambut, sehingga warna yang tepat akan memberikan kesan terbaik. Sementara bentuk bingkai yang sesuai akan menyempurnakan bentuk wajah dan menonjolkan fitur terbaik dari wajah Anda. Untuk mengetahui kacamata mana yang paling pas, kenalilah bentuk wajah Anda dengan bercermin atau ber-selfie ria. Beranikan diri bereksperimen dengan berbagai  warna dan bentuk bingkai kacamata. Saat pergi ke optik, ajak juga orang terdekat untuk dimintai pendapat. Sedikit pengetahuan mengenai bentuk wajah dan bentuk bingkai seperti yang berikut ini juga bisa membantu Anda memilih kacamata yang tepat. 5.	Bentuk wajah berlian
+Ciri: Dahi sempit, garis rahang tajam.
+Gunakan: Bentuk oval atau desain tanpa bingkai (rimless). Kacamata dengan detail bingkai tebal di bagian atas, misalnya model Clubmaster.
+Hindari: Bingkai sempit dan tipis.
+</item>
+
+    </string-array>
+
+    <!--    Todo: remove or change this placeholder text-->
+    <string name="hello_blank_fragment">Hello Blank Fragmen</string>
+    <string name="artikel">Artikel</string>
+    <string name="overview">Overview</string>
+    <string name="nama_kacamata">Nama Kacamata</string>
+    <string name="rekomendasi">rekomendasi</string>
+    <string name="kategori">kategori</string>
+    <string name="berita">berita</string>
+    <string name="akun_saya">akun_saya</string>
+    <string name="nama_artikel">Nama Artikel</string>
+</resources>
