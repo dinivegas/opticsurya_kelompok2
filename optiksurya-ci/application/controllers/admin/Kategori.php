@@ -1,7 +1,8 @@
 <?php 
 	defined('BASEPATH') OR exit('No direct script access allowed');
 
-	class Kategori extends CI_Controller{
+	class Kategori extends CI_Controller
+	{
 
 		//load model
 		public function __construct()
