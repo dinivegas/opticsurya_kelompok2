@@ -26,16 +26,22 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
+
+        <!-- Menu dashboard-->
+        <li><a href="<?php echo base_url('admin/dasbor') ?>"><i class="fa fa-dashboard text-aqua"></i><span>DASHBOARD</span></a></li>
+
+        <!-- Menu PRODUK-->
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+            <i class="fa fa-sitemap"></i> <span>PRODUK</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url()?>assets/admin/index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-            <li><a href="<?php echo base_url()?>assets/admin/index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+            <li><a href="<?php echo base_url('admin/produk')?>"><i class="fa fa-table"></i> Data Produk</a></li>
+            <li><a href="<?php echo base_url('admin/produk/tambah')?>"><i class="fa fa-plus"></i> Tambah Produk</a></li>
+            <li><a href="<?php echo base_url('admin/kategori')?>"><i class="fa fa-tags"></i>Kategori Produk</a></li>
           </ul>
         </li>
         <li class="treeview">
