@@ -36,7 +36,7 @@
 
 		public function tambah($data)
 		{
-			$this->db->insert('users', $data)
+			$this->db->insert('users', $data);
 		}
 
 		public function edit($data)
