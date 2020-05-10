@@ -8,6 +8,8 @@
 		{
 			parent::__construct();
 			$this->load->model('User_model');
+			//proteksi halaman
+			$this->simple_login->cek_login();
 		}
 
 		//data user
@@ -54,7 +56,8 @@
 				$i = $this->input;
 				$data = array('nama'	=> $i->post('nama'),
 							'email' 	=> $i->post('email'),
-							'username' => $i->post('username'), 'password' => $i->post('password'),
+							'username' => $i->post('username'), 
+							'password' => SHA1($i->post('password')),
 							'akses_level' => $i->post('akses_level')
 						);	
 				$this->User_model->tambah($data);
@@ -62,6 +65,56 @@
 				redirect(base_url('admin/user'), 'refresh');
 			}
 			//end masuk database
+		}
+
+		public function edit()
+		{
+			$user = $this->user_model->detail($id_user);
+
+			//validasi input
+			$valid = $this->form_validation;
+
+			$valid->set_rules('nama', 'Nama lengkap', 'required',
+				array('required' => '%s harus diisi'));
+
+			$valid->set_rules('email', 'Email', 'required|valid_email',
+				array('required' => '%s harus diisi',
+					'valid_email' => '%s tidak valid'));
+
+			$valid->set_rules('password', 'Password', 'required',
+				array('required'  => '%s harus diisi'));
+
+			if ($valid->run()===FALSE) 
+			{
+				//end validasi
+
+				$data = array('title'	=> 'Tambah Pengguna',
+					'isi'	=> 'admin/user/tambah'
+				);
+
+				$this->load->view('admin/layout/wrapper', $data, FALSE);
+			}else{
+				$i = $this->input;
+				$data = array('nama'	=> $i->post('nama'),
+					'email'		=> $i->post('email'),
+					'username'	=> $i->post('username'),
+					'password' 	=> SHA1($i->post('password')),
+					'akses_level'	=> SHA1($i->post('akses_level'))
+				);
+				$this->User_model->tambah($data);
+				$this->session->set_flashdata('sukses', 'Data telah ditambah');
+				redirect(base_url('admin/user'), 'refresh');
+			}
+			//end masuk database
+		}
+
+		//delete user
+		public function delete($id_user)
+		{
+			$data = array('id_user'	=> $id_user);
+			$this->user_model->delete($data);
+			$this->session->set_flashdata('sukses', 'Data telah dihapus');
+			redirect(base_url('admin/user'), 'refresh');
 		}
 	}
 ?>
