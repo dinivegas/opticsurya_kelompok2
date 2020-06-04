@@ -1,5 +1,5 @@
 <!-- Shopping Cart Section Begin --> 
-<section class="cart bgwhite p-t-70 p-b-100">
+<section class="shopping-cart spad">
 <div class="container">
 <h2><?php echo $title ?></h2>
 <br>
@@ -9,8 +9,10 @@
     echo '</div>';
 }
 ?>
-<p class="alert alert-success">Terimakasih, produk yang Anda beli akan segera kami proses <a href="<?php echo base_url('masuk') ?>" class="btn btn-info"> Silahkan lakukan pembayaran </a></p>
+<p class="alert alert-success">Terimakasih, Produk yang anda beli akan kami proses</p>
 <div class="col-md-12">
+
+	
 </div>
 
 <div class="col-lg-12">

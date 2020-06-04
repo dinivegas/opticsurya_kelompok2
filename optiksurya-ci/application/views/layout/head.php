@@ -1,3 +1,7 @@
+<?php 
+//load konfigurasi model
+$site = $this->konfigurasi_model->listing();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +9,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="<?php echo base_url() ?>assets/template/images/icons/favicon.png"/>
+	<link rel="icon" type="image/png" href="<?php echo base_url('assets/upload/images/'.$site->icon)?>">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/template/vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->

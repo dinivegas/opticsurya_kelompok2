@@ -36,7 +36,7 @@
 				<tr class="table-row">
 					<td class="column-1">
 						<div class="cart-img-product b-rad-4 o-f-hidden">
-							<img src="<?php echo base_url('assets/upload/images/thumbs/'.$produk->gambar)?>" alt="IMG-PRODUCT">
+							<img src="<?php echo base_url('assets/upload/img/thumbs/'.$produk->gambar)?>" alt="IMG-PRODUCT">
 						</div>
 					</td>
 					<td class="column-2"><?php echo $keranjang['name'] ?></td>
