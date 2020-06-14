@@ -26,11 +26,13 @@ class Masuk extends CI_Controller {
 		} 
 		//end validasi
 
-		$data = array(	'tittle' => 'Login Pelanggan',
+		$data = array(	'title' => 'Login Pelanggan',
 						'isi'	 => 'masuk/list'
 						);
 		$this->load->view('layout/wrapper', $data, FALSE);
 	}
+
+	// logout
 	public function logout(){
 		//ambil fungsi simple_pelanggan  yang sudah diset di autoload libraries
 		$this->simple_pelanggan->logout();

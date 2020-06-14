@@ -11,12 +11,51 @@
 
             <div class="col-sm-6 col-md-8 col-lg-9 p-b-50">
                 <!-- Product -->
-                <div class="row">
-                <div class="alert alert-secondary" >
-                <h1 text-center>Selamat Datang<i><strong><?php echo $this->session->userdata('nama_pelanggan'); ?></strong></i></h1>
-                    
-                </div>
-                </div>
+               	
+               	<div class="alert alert-secondary" >
+               	<h1 text-center>Selamat Datang<i><strong><?php echo $this->session->userdata('nama_pelanggan'); ?></strong></i></h1>
+               		
+               	</div>
+                   <?php
+                    // Kalau ada transaksi 
+                   if($detail_transaksi) {
+                    ?>
+                    <table class="table table-bordered" width="100%">
+                        <thead>
+                            <tr class="bg-success">
+                                <th>No</th>
+                                <th>Kode</th>
+                                <th>Tanggal</th>
+                                <th>Jumlah Total</th>
+                                <th>Jumlah Item</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php $i=1; foreach($detail_transaksi as $detail_transaksi) { ?>
+                            <tr>
+                                <td><?php echo $i ?></td>
+                                <td><?php echo $detail_transaksi->kd_transaksi ?></td>
+                                <td><?php echo date('d-M-Y',strtotime($detail_transaksi->tgl_transaksi)) ?></td>
+                                <td><?php echo number_format($detail_transaksi->jumlah_transaksi) ?></td>
+                                <td><?php echo $detail_transaksi->total_item ?></td>
+                                <td><?php echo $detail_transaksi->status_bayar ?></td>
+                                <td>
+                                    <a href="<?php echo base_url('dashboard/detail/' .$detail_transaksi->kd_transaksi) ?>" class="btn btn-warning btn-xs"><i class="fa fa-eye"></i>Detail </a>
+                                </td>
+                            </tr>
+                            <?php $i++; } ?>
+                        </tbody>
+                    </table>
+                    <?php
+                    }else{ ?>
+                    <p class="alert alert-success">
+                        <i class="fa fa-warning"></i>Belum ada data transaksi</p>
+                    </
+                    <?php
+                    }
+                    ?>
             </div>
         </div>
     </div>

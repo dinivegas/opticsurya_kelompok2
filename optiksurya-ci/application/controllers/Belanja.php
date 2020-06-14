@@ -14,7 +14,7 @@ class Belanja extends CI_Controller {
 		$this->load->model('detail_transaksi_model');
 		$this->load->model('transaksi_model');
 
-		//load helper random string untuk kode transaksi
+		//load helper random striing
 		$this->load->helper('string');
 	}
 
@@ -32,15 +32,15 @@ class Belanja extends CI_Controller {
 	public function sukses()
 	{
 
-		$data = array(	'title'		=> 'Belanja Berhasil',
+		$data = array(	'title'	=> 'Belanja Berhasil',
 						'isi'		=> 'belanja/sukses'
 						);
 		$this->load->view('layout/wrapper', $data, FALSE);
 	}
+	
 	//checkout
 	public function checkout()
 	{
-		$ongkir = $this->ongkir_model->listing();
 		//cek pelanggan sudah login atau belum jika belum maka tidak bisa melakukan proses checkout dan harus login terselbih dahulu
 		//cek login dengan menggunakan session
 		if($this->session->userdata('email')){
@@ -64,9 +64,13 @@ class Belanja extends CI_Controller {
 				array(	'required'		=> '%s harus diisi',
 						'valid_email' 	=> '%s tidak valid',
 						'is_unique'		=> '%s sudah terdaftar.'));
+
 			if ($valid->run()===FALSE) {
+
 				//end validasi
-			$data = array(	'title'		=> 'Checkout',
+
+
+			$data = array(	'title'	=> 'Checkout',
 							'keranjang'	=> $keranjang,
 							'pelanggan'	=> $pelanggan,
 							'isi'		=> 'belanja/checkout'
@@ -83,7 +87,7 @@ class Belanja extends CI_Controller {
 							'kd_transaksi' 		=> $i->post('kd_transaksi'),
 							'tgl_transaksi' 	=> $i->post('tgl_transaksi'),
 							'jumlah_transaksi' 	=> $i->post('jumlah_transaksi'),
-							'status_bayar' 		=> 'Belum Bayar',
+							'status_bayar' 		=> 'Belum',
 							'tgl_post'			=> date('Y-m-d H:i:s')
 							);
 			//proses masuk ke detail transaksi
@@ -111,7 +115,7 @@ class Belanja extends CI_Controller {
 		}
 		//end masuk database
 		}else{
-			//kalau belum maka harus registrasi
+			//kalau belum maka harus resgitrsi
 			$this->session->set_flashdata('sukses', 'Silahkan Log In atau Registrasi terlebih dahulu');
 			redirect(base_url('registrasi'),'refresh');
 		}
