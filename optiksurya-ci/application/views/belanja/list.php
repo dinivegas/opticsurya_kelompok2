@@ -94,11 +94,6 @@
             <a href="<?php echo base_url('home') ?>" class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4"><i class="fa fa-shopping-cart"></i>  Belanja Lagi</a>
         </div>
         </div>
-	<div class="size11 trans-0-4 m-t-10 m-b-10 p-l-20">   
-        <div class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">
-            <a href="<?php echo base_url('home') ?>" class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4"> Checkout</a>
-        </div>
-	</div>
 	</div>
 	<!-- Total -->
 	<div class="bo9 w-size30 p-l-30 p-r-30 p-t-30 p-b-30 m-t-30 m-r-0 m-l-auto p-lr-15-sm">

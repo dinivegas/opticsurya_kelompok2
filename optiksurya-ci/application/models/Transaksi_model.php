@@ -16,14 +16,16 @@ class Transaksi_model extends CI_Model {
 		$query = $this->db->get();
 		return $query->result();
 	}
-	// transaksi berdasarkan detail
+	//listing berdasarkan detail transaksi
 	public function kd_transaksi($kd_transaksi)
 	{
-		$this->db->select('transaksi.*, produk.nama_produk, produk.kd_produk');
+		$this->db->select('transaksi.*,
+							produk.nama_produk,
+							produk.kd_produk');
 		$this->db->from('transaksi');
-		// join
-		$this->db->join('produk', 'produk.id_produk=transaksi.id_produk', 'left');
-		// end join
+		//join
+		$this->db->join('produk', 'produk.id_produk = transaksi.id_produk', 'left');
+		//end join
 		$this->db->where('kd_transaksi', $kd_transaksi);
 		$this->db->order_by('id_transaksi', 'desc');
 		$query = $this->db->get();
