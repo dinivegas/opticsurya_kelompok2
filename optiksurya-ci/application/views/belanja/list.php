@@ -217,7 +217,7 @@
 
 	$.ajax({
 		type:'post',
-		url: '<?php echo base_url('shipping/ekspedisi') ?>',
+		url: '<?php echo base_url('belanja/ekspedisi') ?>',
 		success:function(hasil_ekspedisi)
 		{
 			$("select[name=nama_ekspedisi]").html(hasil_ekspedisi);

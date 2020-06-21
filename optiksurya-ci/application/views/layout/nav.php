@@ -51,7 +51,7 @@ $nav_produk_mobile  = $this->konfigurasi_model->nav_produk();
 					</a>
 
 					<a href="<?php echo base_url('masuk/logout') ?>" class="header-wrapicon1 dis-block">
-					<i class="fa fa-sign-out"></i>Logout
+					(Logout)
 					</a>
 
 				<?php }else{?>
@@ -113,18 +113,11 @@ $nav_produk_mobile  = $this->konfigurasi_model->nav_produk();
 							Total : <?php if (!empty($keranjang)) {echo $total_belanja;} ?>
 						</div>
 
-						<div class="header-cart-buttons">
-							<div class="header-cart-wrapbtn">
+						<div class="header-cart-buttons size11 trans-0-4 m-t-10 m-b-10">
+							<div class="size11 trans-0-4 m-t-10 m-b-10">
 								<!-- Button -->
 								<a href="<?php echo base_url('belanja') ?>" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-									View Cart
-								</a>
-							</div>
-
-							<div class="header-cart-wrapbtn">
-								<!-- Button -->
-								<a href="<?php echo base_url('belanja/checkout') ?>" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-									Check Out
+									Lihat Keranjang Belanja
 								</a>
 							</div>
 						</div>
