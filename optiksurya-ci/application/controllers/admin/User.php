@@ -98,7 +98,7 @@ class User extends CI_Controller {
 							);
 			$this->user_model->edit($data);
 			$this->session->set_flashdata('sukses', 'Data telah diedit');
-			redirect(site_url('admin/user'),'refresh');				
+			redirect(base_url('admin/user'),'refresh');				
 		}
 	}
 	public function delete($id_user)
@@ -106,7 +106,7 @@ class User extends CI_Controller {
 		$data = array('id_user'	=> $id_user);
 		$this->user_model->delete($data);
 		$this->session->set_flashdata('Sukses', 'Data Berhasil Dihapus');
-		redirect(site_url('admin/user'), 'refresh');
+		redirect(base_url('admin/user'), 'refresh');
 
 	}
 

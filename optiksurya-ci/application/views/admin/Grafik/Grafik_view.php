@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="<?php echo base_url().'assets/css/morris.css'?>">
   </head>
   <body>
-    <h2>Grafik Jumlah Stok Produk di Optik Surya</h2>
  
     <div id="graph"></div>
  

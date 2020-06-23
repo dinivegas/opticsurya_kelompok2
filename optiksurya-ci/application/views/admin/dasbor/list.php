@@ -1,3 +1,8 @@
+<?php
+  echo '<h2>Grafik Jumlah Stok Produk di Optik Surya</h2>';
+  $this->load->view('admin/dasbor/Grafik_view');
+?>
+
 <div class="card">
   <div class="card-header">
     <h3 class="card-title">DataTable with default features</h3>

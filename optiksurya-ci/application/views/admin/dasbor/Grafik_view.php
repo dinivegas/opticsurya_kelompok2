@@ -6,8 +6,6 @@
     <link rel="stylesheet" href="<?php echo base_url().'assets/css/morris.css'?>">
   </head>
   <body>
-    <h2>Grafik Jumlah Stok Produk di Optik Surya</h2>
- 
     <div id="graph"></div>
  
     <script src="<?php echo base_url().'assets/js/jquery3.4.1.min.js'?>"></script>
@@ -17,9 +15,9 @@
         Morris.Bar({
           element: 'graph',
           data: <?php echo $data;?>,
-          xkey: 'year',
-          ykeys: ['purchase', 'sale', 'profit'],
-          labels: ['Purchase', 'Sale', 'Profit']
+          xkey: 'nama_produk',
+          ykeys: ['stok'],
+          labels: ['Jumlah Stok']
         });
     </script>
   </body>
