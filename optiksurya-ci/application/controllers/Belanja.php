@@ -13,7 +13,7 @@ class Belanja extends CI_Controller {
 		$this->load->model('detail_transaksi_model');
 		$this->load->model('transaksi_model');
 
-		//load helper random striing
+		//load helper random string untuk kode transaksi
 		$this->load->helper('string');
 	}
 
@@ -22,21 +22,34 @@ class Belanja extends CI_Controller {
 		$keranjang = $this->cart->contents();
 
 		$data  = array(	'title' 	=> 'Keranjang Belanja',
-						'keranjang'	=> $keranjang,
+						'keranjang'	=>  $keranjang,
 						'isi'		=> 'belanja/list'
 						 );
 		$this->load->view('layout/wrapper', $data, FALSE);
 	}
+	// public function get_provinsi()
+	// {
+	// 	$provinces= $this->rajaongkir->province();
+	// 	$this->output->set_content_type('application/json')->set_output($provinces);
+	// }
+	// public function get_kota($id_provinsi)
+	// {
+	// 	$kota= $this->rajaongkir->city($id_provinsi);
+	// 	$this->output->set_content_type('application/json')->set_output($kota);
+	// }
+	// public function get_biaya($asal,$tujuan,$berat,$kurir)
+	// {
+	// 	$ongkir= $this->rajaongkir->cost($asal,$tujuan,$berat,$kurir);
+	// 	$this->output->set_content_type('application/json')->set_output($ongkir);
+	// }
 	//sukses belanja
 	public function sukses()
 	{
-
-		$data = array(	'title'	=> 'Belanja Berhasil',
+		$data = array(	'title'		=> 'Belanja Berhasil',
 						'isi'		=> 'belanja/sukses'
 						);
 		$this->load->view('layout/wrapper', $data, FALSE);
 	}
-	
 	public function provinsi()
 	{
 		$curl = curl_init();
@@ -268,7 +281,7 @@ class Belanja extends CI_Controller {
 		}
 		//end masuk database
 		}else{
-			//kalau belum login maka harus login
+			//kalau belum maka harus registrasi
 			$this->session->set_flashdata('sukses', 'Silahkan Log In atau Registrasi terlebih dahulu');
 			redirect(base_url('masuk'),'refresh');
 		}
@@ -277,22 +290,17 @@ class Belanja extends CI_Controller {
 	//tambahkan keranjang bealanja
 	public function add()
 	{
-		//ambil data kategori
-		$ongkir = $this->ongkir_model->listing();
 		//ambil data dari form
 		$id 			= $this->input->post('id');
 		$qty 			= $this->input->post('qty');
 		$price			= $this->input->post('price');
 		$name 			= $this->input->post('name');
 		$redirect_page 	= $this->input->post('redirect_page');
-		$ongkir  		= $this->input->post('tarif');
-
 		//proses mmasukan ke keranjang belanja
-		$data = array( 	'id'      	=> $id,
+		$data = array(  'id'      	=> $id,
         				'qty'     	=> $qty,
         				'price'   	=> $price,
         				'name'    	=> $name,
-        				'ongkir'	=> $ongkir
 						);
 		$this->cart->insert($data);
 		// redirect page

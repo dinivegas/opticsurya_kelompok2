@@ -19,6 +19,7 @@
         <!-- Menu dashboard-->
         <li><a href="<?php echo site_url('admin/dasbor') ?>"><i class="fa fa-dashboard text-aqua"></i><span>DASHBOARD</span></a></li>
 
+<<<<<<< HEAD
          <!-- Menu Transaksi-->
         <li class="treeview">
           <a href="<?php echo site_url('admin/transaksi')?>">
@@ -35,6 +36,13 @@
             </span>
           </a>
         </li>
+=======
+        <!-- Menu Transaksi-->
+        <li><a href="<?php echo base_url('admin/transaksi') ?>"><i class="fa fa-check"></i><span>TRANSAKSI</span></a></li>
+
+        <!-- Menu Rekening-->
+        <li><a href="<?php echo base_url('admin/rekening') ?>"><i class="fa fa-dollar"></i><span>REKENING</span></a></li>
+>>>>>>> 9b156290ca0aff36f9136b780d71bd2c1d1feacf
         <!-- Menu PRODUK-->
         <li class="treeview">
           <a href="#">
