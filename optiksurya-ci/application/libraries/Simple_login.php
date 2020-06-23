@@ -26,12 +26,12 @@ class Simple_login
 			$this->CI->session->set_userdata('username', $username);
 			$this->CI->session->set_userdata('akses_level', $akses_level);
 			//redirect ke halaman admin
-			redirect(base_url('admin/dasbor'),'refresh');
+			redirect(site_url('admin/dasbor'),'refresh');
 
 			//kalau tidak ada data/ usernam/password salah
 		}else{
 			$this->CI->session->set_flashdata('warning', 'Username atau Password Anda Salah');
-			redirect(base_url('login'),'refresh');
+			redirect(site_url('login'),'refresh');
 		}
 
 	}
@@ -41,7 +41,7 @@ class Simple_login
 		//menerima apakah session sudah tersedi atau belum, jika belum alihkan k halaman login
 		if ($this->CI->session->userdata('username')== "") {
 			$this->CI->session->set_flashdata('warning', 'Anda Belum Login');
-			redirect(base_url('login'),'refresh');
+			redirect(site_url('login'),'refresh');
 		}
 	}
 	public function logout()
@@ -53,7 +53,7 @@ class Simple_login
 		$this->CI->session->unset_userdata('akses_level');
 		//setelah session dibuang, maka redirect ke halamn login
 		$this->CI->session->set_flashdata('sukses', 'Anda Telah Logout');
-		redirect(base_url('login'),'refresh');
+		redirect(site_url('login'),'refresh');
 	}
 
 	

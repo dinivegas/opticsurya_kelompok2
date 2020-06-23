@@ -23,3 +23,6 @@
   </div>
   <!-- /.card-body -->
 </div>
+<?php 
+  $this->load->view('admin/Grafik/Grafik_view');
+?>

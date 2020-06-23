@@ -17,11 +17,11 @@
         <li class="header">MAIN NAVIGATION</li>
 
         <!-- Menu dashboard-->
-        <li><a href="<?php echo base_url('admin/dasbor') ?>"><i class="fa fa-dashboard text-aqua"></i><span>DASHBOARD</span></a></li>
+        <li><a href="<?php echo site_url('admin/dasbor') ?>"><i class="fa fa-dashboard text-aqua"></i><span>DASHBOARD</span></a></li>
 
          <!-- Menu Transaksi-->
         <li class="treeview">
-          <a href="<?php echo base_url('admin/transaksi')?>">
+          <a href="<?php echo site_url('admin/transaksi')?>">
             <i class="fa fa-check"></i> <span>TRANSAKSI</span>
             <span class="pull-right-container">
             </span>
@@ -29,7 +29,7 @@
         </li>
         <!-- Menu Rekening-->
         <li class="treeview">
-          <a href="<?php echo base_url('admin/rekening')?>">
+          <a href="<?php echo site_url('admin/rekening')?>">
             <i class="fa fa-dollar"></i> <span>DATA REKENING</span>
             <span class="pull-right-container">
             </span>
@@ -44,9 +44,9 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url('admin/produk')?>"><i class="fa fa-table"></i> Data Produk</a></li>
-            <li><a href="<?php echo base_url('admin/produk/tambah')?>"><i class="fa fa-plus"></i> Tambah Produk</a></li>
-            <li><a href="<?php echo base_url('admin/kategori')?>"><i class="fa fa-tags"></i>Kategori Produk</a></li>
+            <li><a href="<?php echo site_url('admin/produk')?>"><i class="fa fa-table"></i> Data Produk</a></li>
+            <li><a href="<?php echo site_url('admin/produk/tambah')?>"><i class="fa fa-plus"></i> Tambah Produk</a></li>
+            <li><a href="<?php echo site_url('admin/kategori')?>"><i class="fa fa-tags"></i>Kategori Produk</a></li>
           </ul>
         </li>
         <!-- Menu Artikel-->
@@ -58,8 +58,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url('admin/berita')?>"><i class="fa fa-table"></i> Data Arikel</a></li>
-            <li><a href="<?php echo base_url('admin/berita/tambah')?>"><i class="fa fa-plus"></i> Tambah Data Artikel</a></li>
+            <li><a href="<?php echo site_url('admin/berita')?>"><i class="fa fa-table"></i> Data Arikel</a></li>
+            <li><a href="<?php echo site_url('admin/berita/tambah')?>"><i class="fa fa-plus"></i> Tambah Data Artikel</a></li>
           </ul>
         </li>
           <!-- Menu Onkir-->
@@ -71,8 +71,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url('admin/ongkir')?>"><i class="fa fa-table"></i> Data Ongkir</a></li>
-            <li><a href="<?php echo base_url('admin/ongkir/tambah')?>"><i class="fa fa-plus"></i> Tambah List Ongkir</a></li>
+            <li><a href="<?php echo site_url('admin/ongkir')?>"><i class="fa fa-table"></i> Data Ongkir</a></li>
+            <li><a href="<?php echo site_url('admin/ongkir/tambah')?>"><i class="fa fa-plus"></i> Tambah List Ongkir</a></li>
           </ul>
         </li>
          <!-- Menu user-->
@@ -84,8 +84,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url('admin/user')?>"><i class="fa fa-table"></i> Data Pengguna</a></li>
-            <li><a href="<?php echo base_url('admin/user/tambah')?>"><i class="fa fa-plus"></i> Tambah Pengguna</a></li>
+            <li><a href="<?php echo site_url('admin/user')?>"><i class="fa fa-table"></i> Data Pengguna</a></li>
+            <li><a href="<?php echo site_url('admin/user/tambah')?>"><i class="fa fa-plus"></i> Tambah Pengguna</a></li>
           </ul>
         </li>
          <!-- Menu konfigurasi-->
@@ -97,9 +97,9 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url('admin/konfigurasi')?>"><i class="fa fa-home"></i> Kofigurasi Umum</a></li>
-            <li><a href="<?php echo base_url('admin/konfigurasi/logo')?>"><i class="fa fa-image"></i> Konfigurasi Logo</a></li>
-            <li><a href="<?php echo base_url('admin/konfigurasi/icon')?>"><i class="fa fa-home"></i>Konfigurasi Icon</a></li>
+            <li><a href="<?php echo site_url('admin/konfigurasi')?>"><i class="fa fa-home"></i> Kofigurasi Umum</a></li>
+            <li><a href="<?php echo site_url('admin/konfigurasi/logo')?>"><i class="fa fa-image"></i> Konfigurasi Logo</a></li>
+            <li><a href="<?php echo site_url('admin/konfigurasi/icon')?>"><i class="fa fa-home"></i>Konfigurasi Icon</a></li>
           </ul>
         </li>
     <!-- /.sidebar -->

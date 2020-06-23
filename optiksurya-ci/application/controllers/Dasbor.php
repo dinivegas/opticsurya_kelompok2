@@ -52,7 +52,7 @@ class Dasbor extends CI_Controller {
 		//pastikan bahwa pelanggan hanya mengakses data transaksi
 		if($detail_transaksi->id_pelanggan != $id_pelanggan){
 			$this->session->set_flashdata('warning', 'Anda mencoba mengakses data transaksi orang lain');
-			redirect(base_url('masuk'));
+			redirect(site_url('masuk'));
 		}
 
 		$data = array(  'title'				=> 'Riwayat Belanja',
@@ -112,7 +112,7 @@ class Dasbor extends CI_Controller {
 		//emd data update
 			$this->pelanggan_model->edit($data);
 			$this->session->set_flashdata('sukses', 'Update Profil Berhasil');
-			redirect(base_url('dasbor/profil'),'refresh');		
+			redirect(site_url('dasbor/profil'),'refresh');		
 		}
 		//end masuk database	
 
@@ -195,7 +195,7 @@ class Dasbor extends CI_Controller {
 							);
 			$this->detail_transaksi_model->edit($data);
 			$this->session->set_flashdata('sukses', 'Konfirmasi Pembayaran Berhasil');
-			redirect(base_url('dasbor'),'refresh');
+			redirect(site_url('dasbor'),'refresh');
 
 		}}else{
 			//edt produk tanpa ganti gambar
@@ -213,7 +213,7 @@ class Dasbor extends CI_Controller {
 							);
 			$this->detail_transaksi_model->edit($data);
 			$this->session->set_flashdata('sukses', 'Konfirmasi Pembayaran Berhasil');
-			redirect(base_url('dasbor'),'refresh');
+			redirect(site_url('dasbor'),'refresh');
 
 
 		}}

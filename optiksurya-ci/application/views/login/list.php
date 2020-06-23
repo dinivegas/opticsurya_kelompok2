@@ -51,7 +51,7 @@ if($this->session->flashdata('sukses')) {
   echo '</div>';
 }
 //form open login
-echo form_open(base_url('login'));
+echo form_open(site_url('login'));
 ?>
 
       <div class="form-group has-feedback">

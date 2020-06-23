@@ -18,13 +18,13 @@ $nav_produk_mobile  = $this->konfigurasi_model->nav_produk();
 						</li>
 
 						<li>
-							<a href="<?php echo base_url('produk') ?>">Produk &amp; Belanja</a>
+							<a href="<?php echo site_url('produk') ?>">Produk &amp; Belanja</a>
 						</li>
 
-						<li><a href="<?php echo base_url('produk') ?>">Kategori</a>
+						<li><a href="<?php echo site_url('produk') ?>">Kategori</a>
 						    <ul class="sub_menu">
 						    <?php foreach ($nav_produk as $nav_produk) { ?>
-						        <li><a href="<?php echo base_url('produk/kategori/'.$nav_produk->slug_kategori)?>">
+						        <li><a href="<?php echo site_url('produk/kategori/'.$nav_produk->slug_kategori)?>">
 						            <?php echo $nav_produk->nama_kategori ?>
 						        </a></li>
 						        <?php } ?>
@@ -32,11 +32,11 @@ $nav_produk_mobile  = $this->konfigurasi_model->nav_produk();
 						</li>
 
 						<li>
-							<a href="<?php echo base_url('berita') ?>">Artikel</a>
+							<a href="<?php echo site_url('berita') ?>">Artikel</a>
 						</li>
 
 						<li>
-							<a href="<?php echo base_url('kontak') ?>">Kontak</a>
+							<a href="<?php echo site_url('kontak') ?>">Kontak</a>
 						</li>
 					</ul>
 				</nav>
@@ -55,7 +55,7 @@ $nav_produk_mobile  = $this->konfigurasi_model->nav_produk();
 					</a>
 
 				<?php }else{?>
-				<a href="<?php echo base_url('registrasi') ?>" class="header-wrapicon1 dis-block">
+				<a href="<?php echo site_url('registrasi') ?>" class="header-wrapicon1 dis-block">
 					<img src="<?php echo base_url() ?>assets/template/images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
 				</a>
 				<?php } ?>
@@ -116,14 +116,14 @@ $nav_produk_mobile  = $this->konfigurasi_model->nav_produk();
 						<div class="header-cart-buttons">
 							<div class="header-cart-wrapbtn">
 								<!-- Button -->
-								<a href="<?php echo base_url('belanja') ?>" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+								<a href="<?php echo site_url('belanja') ?>" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
 									View Cart
 								</a>
 							</div>
 
 							<div class="header-cart-wrapbtn">
 								<!-- Button -->
-								<a href="<?php echo base_url('belanja/checkout') ?>" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+								<a href="<?php echo site_url('belanja/checkout') ?>" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
 									Check Out
 								</a>
 							</div>

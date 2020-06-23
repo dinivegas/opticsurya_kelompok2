@@ -1,0 +1,16 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Grafik extends CI_Controller{
+    function __construct(){
+      parent::__construct();
+      //load chart_model from model
+      $this->load->model('Grafik_model');
+    }
+ 
+    function index(){
+      $data = $this->Grafik_model->get_data()->result();
+      $x['data'] = json_encode($data);
+      $this->load->view('admin/dasbor/Grafik_view',$x);
+    }
+}
