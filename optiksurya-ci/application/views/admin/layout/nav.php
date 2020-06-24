@@ -19,11 +19,22 @@
         <!-- Menu dashboard-->
         <li><a href="<?php echo base_url('admin/dasbor') ?>"><i class="fa fa-dashboard text-aqua"></i><span>DASHBOARD</span></a></li>
 
-        <!-- Menu Transaksi-->
-        <li><a href="<?php echo base_url('admin/transaksi') ?>"><i class="fa fa-check"></i><span>TRANSAKSI</span></a></li>
-
+         <!-- Menu Transaksi-->
+        <li class="treeview">
+          <a href="<?php echo base_url('admin/transaksi')?>">
+            <i class="fa fa-check"></i> <span>TRANSAKSI</span>
+            <span class="pull-right-container">
+            </span>
+          </a>
+        </li>
         <!-- Menu Rekening-->
-        <li><a href="<?php echo base_url('admin/rekening') ?>"><i class="fa fa-dollar"></i><span>REKENING</span></a></li>
+        <li class="treeview">
+          <a href="<?php echo base_url('admin/rekening')?>">
+            <i class="fa fa-dollar"></i> <span>DATA REKENING</span>
+            <span class="pull-right-container">
+            </span>
+          </a>
+        </li>
         <!-- Menu PRODUK-->
         <li class="treeview">
           <a href="#">
@@ -49,19 +60,6 @@
           <ul class="treeview-menu">
             <li><a href="<?php echo base_url('admin/berita')?>"><i class="fa fa-table"></i> Data Arikel</a></li>
             <li><a href="<?php echo base_url('admin/berita/tambah')?>"><i class="fa fa-plus"></i> Tambah Data Artikel</a></li>
-          </ul>
-        </li>
-          <!-- Menu Onkir-->
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-truck"></i> <span>ONGKIR</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="<?php echo base_url('admin/ongkir')?>"><i class="fa fa-table"></i> Data Ongkir</a></li>
-            <li><a href="<?php echo base_url('admin/ongkir/tambah')?>"><i class="fa fa-plus"></i> Tambah List Ongkir</a></li>
           </ul>
         </li>
          <!-- Menu user-->

@@ -84,9 +84,9 @@ class Dasbor extends CI_Controller {
 			//end validasi
 
 
-		$data = array(  'title'			=> 'Profil Saya',
-					'pelanggan'			=> $pelanggan,
-					'isi'				=> 'dasbor/profil'
+		$data = array(  'title'				=> 'Profil Saya',
+					    'pelanggan'			=> $pelanggan,
+					    'isi'				=> 'dasbor/profil'
 						);
 		$this->load->view('layout/wrapper', $data, FALSE);
 		//masuk databse

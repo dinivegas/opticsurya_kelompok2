@@ -2,20 +2,18 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Transaksi extends CI_Controller {
-	//load model
+
 	public function __construct()
 	{
 		parent::__construct();
 		$this->load->model('detail_transaksi_model');
 		$this->load->model('transaksi_model');
 		$this->load->model('rekening_model');
-		$this->load->model('konfigurasi_model');
 	}
-	//load data transaksi
-  	public function index()
-	{
 
-	    $detail_transaksi = $this->detail_transaksi_model->listing();
+	public function index()
+	{
+		$detail_transaksi = $this->detail_transaksi_model->listing();
 	    $data = array(	'title' 			=> 'Data Transaksi',
 					    'detail_transaksi'	=>  $detail_transaksi,
 					    'isi'				=> 'admin/transaksi/list'
@@ -26,7 +24,7 @@ class Transaksi extends CI_Controller {
 	{
 		$detail_transaksi = $this->detail_transaksi_model->kd_transaksi($kd_transaksi);
 		$transaksi 		  = $this->transaksi_model->kd_transaksi($kd_transaksi);
- 
+
 		$data = array(	'title'				=> 'Riwayat Belanja',
 						'detail_transaksi'	=> $detail_transaksi,
 						'transaksi'			=> $transaksi,

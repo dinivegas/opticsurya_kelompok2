@@ -16,7 +16,7 @@ class Rekening extends CI_Controller {
 	{
 		$rekening = $this->rekening_model->listing();
 		$data = array(	'title'		=> 'Data Rekening',
-						'rekening'	=>  $rekening,
+						'rekening'	=> $rekening,
 						'isi'		=> 'admin/rekening/list'
 					);
 		$this->load->view('admin/layout/wrapper', $data, FALSE);
@@ -27,29 +27,29 @@ class Rekening extends CI_Controller {
 		// validasi
 		$valid = $this->form_validation;
 
-		$valid->set_rules('nama_bank','Nama Bank','required',
+		$valid->set_rules('nama_bank','Nama Rekening','required',
 			array( 'required'	=> '%s harus diisi'));
+
 
 		$valid->set_rules('nama_pemilik','Nama Pemilik Rekening','required',
 			array( 'required'	=> '%s harus diisi'));
 
-		$valid->set_rules('no_rekening','Nomor Rekening','required|is_unique[rekening.nama_bank]',
+		$valid->set_rules('nomor_rekening','Nomor Rekening','required|is_unique[rekening.nomor_rekening]',
 			array( 'required'	=> '%s harus diisi',
-				   'is_unique'	=> '%s rekening sudah tersedia. Silahkan buat Nomer Rekening baru !'));
+				   'is_unique'	=> '%s rekening sudah tersedia. Silahkan buat nomor rekening baru !'));
 
 		
 		if ($valid->run()===FALSE) {
 
-		$data = array(	'title' => 'Tambah Rekening',
+		$data = array(	'title' => 'Tambah Rekening ',
 						'isi'	=> 'admin/rekening/tambah'
 					);
 		$this->load->view('admin/layout/wrapper', $data, FALSE);
 		}else{
 			$i= $this->input;
-
-			$data= array(	'nama_bank' 	=> $i->post('nama_bank'),
-							'no_rekening' 	=> $i->post('no_rekening'),
-							'nama_pemilik' 	=> $i->post('nama_pemilik')
+			$data= array(	'nama_bank' 		=> $i->post('nama_bank'),
+							'nomor_rekening'	=> $i->post('nomor_rekening'),
+							'nama_pemilik' 		=> $i->post('nama_pemilik')
 							);
 			$this->rekening_model->tambah($data);
 			$this->session->set_flashdata('sukses', 'Data berhasil ditambahkan');
@@ -63,23 +63,22 @@ class Rekening extends CI_Controller {
 		// validasi
 		$valid = $this->form_validation;
 
-		$valid->set_rules('nama_bank', 'Nama Bank', 'required',
+		$valid->set_rules('nama_bank', 'Nama rekening', 'required',
 			array( 'required'	=> '%s harus diisi'));
 
 		if ($valid->run()===FALSE) {
 
-		$data = array(	'title'	 	 => 'Edit Rekening',
+		$data = array(	'title'		 => 'Edit Rekening',
 						'rekening'	 =>	$rekening,
 						'isi'		 => 'admin/rekening/edit'
 					);
 		$this->load->view('admin/layout/wrapper', $data, FALSE);
 		}else{
 			$i= $this->input;
-			
-			$data= array(	'id_rekening'	=> $id_rekening,
-							'nama_bank' 	=> $i->post('nama_bank'),
-							'no_rekening' 	=> $i->post('no_rekening'),
-							'nama_pemilik' 	=> $i->post('nama_pemilik')
+			$data= array(	'id_rekening'		=> $id_rekening,
+							'nama_bank' 		=> $i->post('nama_bank'),
+							'nomor_rekening'	=> $i->post('nomor_rekening'),
+							'nama_pemilik' 		=> $i->post('nama_pemilik')
 							);
 			$this->rekening_model->edit($data);
 			$this->session->set_flashdata('sukses', 'Data telah diedit');

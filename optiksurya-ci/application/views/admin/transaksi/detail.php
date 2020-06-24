@@ -1,7 +1,6 @@
 <p class="pull-right">
 	<div class="btn-group pull-right">
 		<a href="<?php echo base_url('admin/transaksi/cetak/'.$detail_transaksi->kd_transaksi )?>" target="_blank" title="Cetak" class="btn btn-success btn-sm"><i class="fa fa-print"></i> Print </a>
-		<a href="<?php echo base_url('admin/transaksi/'.$detail_transaksi->kd_transaksi )?>" title="Kemabli" class="btn btn-info btn-sm"><i class="fa fa-backward"></i> Kembali </a>
 	</div>
 </p>
 <div class="clearfix"></div><hr>
