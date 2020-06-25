@@ -1,0 +1,35 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="org.nobody.keranjang.MainActivity">
+    <item
+        android:id="@+id/home"
+        android:enabled="true"
+        android:icon="@drawable/ic_home_white_24dp"
+        android:title="@string/beranda"
+        android:visible="true"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/keranjang"
+        android:enabled="true"
+        android:icon="@drawable/ic_shopping_cart_black_24dp"
+        android:title="@string/app_name"
+        android:visible="true"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/chat"
+        android:enabled="true"
+        android:icon="@drawable/ic_chat_white_24dp"
+        android:title="@string/chat"
+        android:visible="true"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/cari"
+        android:enabled="true"
+        android:icon="@drawable/ic_search_white_24dp"
+        android:title="@string/cari"
+        android:visible="true"
+        app:showAsAction="always"
+        app:actionViewClass="androidx.appcompat.widget.SearchView" />
+</menu>
