@@ -9,8 +9,8 @@ class Grafik extends CI_Controller{
     }
  
     function index(){
-      $data = $this->Grafik_model->get_data()->result();
-      $x['data'] = json_encode($data);
+      $data2 = $this->Grafik_model->get_data()->result();
+      $x['data'] = json_encode($data2);
       $this->load->view('admin/dasbor/Grafik_view',$x);
     }
 }
