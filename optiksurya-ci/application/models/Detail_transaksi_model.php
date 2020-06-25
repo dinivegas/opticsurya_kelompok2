@@ -24,36 +24,6 @@ class Detail_transaksi_model extends CI_Model {
 		$query = $this->db->get();
 		return $query->result();
 	}
-	// public function get_filtered($tgl_mulai) 
-	// {
- //       $this->db->select('detail_transaksi.*,
-	// 				    pelanggan.nama_pelanggan,
-	//  					SUM(transaksi.jumlah) AS total_item');
-	//    $this->db->from('detail_transaksi');
-	// 	// //join
-	//     $this->db->join('transaksi', 'transaksi.kd_transaksi = detail_transaksi.kd_transaksi', 'left');
-	// 	$this->db->join('pelanggan', 'pelanggan.id_pelanggan = detail_transaksi.id_pelanggan', 'left');
-	//     $this->db->order_by('tgl_transaksi','desc');
-
-	//    If (!empty($tgl_mulai))
-	//    {
-	//      $this->db->where('tgl_transaksi',$tgl_mulai);
-	//    }
-	//    // If (!empty($tgl_selesai))
-	//    // {
-	//    //   $this->db->where('ts.tgl_transaksi',$tgl_selesai);
-	//    // }
-	//    $query = $this->db->get();
-	//    return ($query->num_rows() > 0) ? $query->result() : NULL;
-	// }
-	// function get_limit_data($daterange){
-	// 	$this->db->order_by("detail_transaksi");
-	// 	$this->db->where('tgl_transaksi >=', $daterange[0]);
-	// 	$this->db->where('tgl_transaksi <=', $daterange[1]);
-	// 	$this->db->join('transaksi', 'transaksi.kd_transaksi = detail_transaksi.kd_transaksi', 'left');
-	// 	$this->db->join('pelanggan', 'pelanggan.id_pelanggan = detail_transaksi.id_pelanggan', 'left');
-	// 	return $this->db->get($this->table." detail_transaksi")->result();
-	// }
 	//list semua hasil checkout
 	public function pelanggan($id_pelanggan)
 	{

@@ -68,16 +68,16 @@
 				 ?>
 				 <tr class="table-row alert alert-info">
 				 	<td colspan="4" class="column-1">Total Belanja</td>
-				 	<td colspan= "2" class="column-2">Rp. <?php echo number_format($this->uri->segment(3), '0',',','.' ) ?></td>
+				 	<td colspan= "2" class="column-2">Rp. <?php echo number_format($this->uri->segment(4), '0',',','.' ) ?></td>
 				 </tr>
 			</table>
 			<br>
-			 <?php echo form_open(base_url('belanja/checkout')); 
+			 <?php echo form_open(base_url('belanja/checkout/'.$this->uri->segment(3)."/".$this->uri->segment(4))); 
 			 $kode_transaksi = date('dmY').strtoupper(random_string('alnum', 8));
 			 ?>
 			<table class="table">
 	           <input type="hidden" name="id_pelanggan" value="<?php echo $pelanggan->id_pelanggan ?>">
-	           <input type="hidden" name="jumlah_transaksi" value="<?php echo number_format($this->uri->segment('3'), '0',',','.' ) ?>">
+	           <input type="hidden" name="jumlah_transaksi" value="<?php echo number_format($this->uri->segment(4), '0',',','.' ) ?>">
 	           <input type="hidden" name="tgl_transaksi" value="<?php echo date('Y-m-d'); ?>">
 	            <table class="table">
 		            <thead>

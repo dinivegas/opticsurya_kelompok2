@@ -95,7 +95,7 @@ class Dasbor extends CI_Controller {
 
 			//kalau password lebih dari 6 karakter, maka password diganti
 			if(strlen($i->post('password')) >= 6) {
-			$data= array(	'id_pelanggan' 	=> $id_pelanggan,
+			$data= array(	'id_pelanggan' 	    => $id_pelanggan,
 							'nama_pelanggan'	=> $i->post('nama_pelanggan'),
 							'password' 			=> SHA1($i->post('password')),
 							'telepon' 			=> $i->post('telepon'),
@@ -103,7 +103,7 @@ class Dasbor extends CI_Controller {
 							);
 		}else{
 			//kalau data password kurang dari 6 karakter, maka tidak perlu diganti
-			$data= array(	'id_pelanggan' 	=> $id_pelanggan,
+			$data= array(	'id_pelanggan' 	    => $id_pelanggan,
 							'nama_pelanggan'	=> $i->post('nama_pelanggan'),
 							'telepon' 			=> $i->post('telepon'),
 							'alamat' 			=> $i->post('alamat'),
