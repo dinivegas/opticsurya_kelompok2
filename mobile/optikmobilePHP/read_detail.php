@@ -3,8 +3,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 	$id_pelanggan= $_POST['id_pelanggan'];
 
-	require_once 'koneksi.php';
-	$conn = mysqli_connect($server, $user, $password, $database);
+	require_once 'connect.php';
 
 	$Sql_Query = "SELECT * FROM pelanggan WHERE id_pelanggan='$id_pelanggan' ";
 
@@ -15,15 +14,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 	if( mysqli_num_rows($response) === 1 ){
 		if ($row = mysqli_fetch_assoc($response)) {
-		$h['nama_pelanggan']	= $row['nama_pelanggan'];
-		$h['email']				= $row['email'];
+		$h['nama_pelanggan']	    = $row['nama_pelanggan'];
+		$h['telepon']				= $row['telepon'];
+		$h['alamat']				= $row['alamat'];
 
 		array_push($result["read"], $h);
 
 		$result["success"] = "1" ;
 		echo json_encode($result);
 
-		mysqli_close($con);
+		mysqli_close($conn);
 	
 }
 }else{
