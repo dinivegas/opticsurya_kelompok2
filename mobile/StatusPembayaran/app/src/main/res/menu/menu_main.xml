@@ -3,8 +3,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.statuspembayaran.MainActivity">
     <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="But"
-        app:showAsAction="never" />
+        android:id="@+id/home"
+        android:enabled="true"
+        android:icon="@drawable/ic_home_white_24dp"
+        android:title="Beranda"
+        android:visible="true"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/keranjang"
+        android:enabled="true"
+        android:icon="@drawable/ic_shopping_cart_black_24dp"
+        android:title="Keranjang"
+        android:visible="true"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/chat"
+        android:enabled="true"
+        android:icon="@drawable/ic_chat_white_24dp"
+        android:title="Chat"
+        android:visible="true"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/cari"
+        android:enabled="true"
+        android:icon="@drawable/ic_search_search_24dp"
+        android:title="Cari"
+        android:visible="true"
+        app:showAsAction="always"
+        app:actionViewClass="androidx.appcompat.widget.SearchView" />
 </menu>
