@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="2dp"
+    app:cardCornerRadius="5dp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="410dp"
+            android:layout_height="119dp"
+            tools:layout_conversion_absoluteHeight="100dp"
+            tools:layout_conversion_absoluteWidth="408dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="20dp">
+
+            <TextView
+                android:id="@+id/stok"
+                android:layout_width="31dp"
+                android:layout_height="15dp"
+                android:text="Stok "
+                android:textSize="12dp"
+                android:textStyle="bold|italic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.039"
+                app:layout_constraintStart_toEndOf="@+id/gambar"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.708"
+                tools:ignore="MissingConstraints"
+                tools:layout_conversion_absoluteHeight="19dp"
+                tools:layout_conversion_absoluteWidth="30dp" />
+
+            <TextView
+                android:id="@+id/nama_produk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama"
+                android:textStyle="bold|italic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.034"
+                app:layout_constraintStart_toEndOf="@+id/gambar"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.141"
+                tools:ignore="MissingConstraints"
+                tools:layout_conversion_absoluteHeight="19dp"
+                tools:layout_conversion_absoluteWidth="30dp" />
+
+            <ImageView
+                android:id="@+id/gambar"
+                android:layout_width="74dp"
+                android:layout_height="59dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.095"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.117"
+                tools:layout_conversion_absoluteHeight="62dp"
+                tools:layout_conversion_absoluteWidth="49dp"
+                tools:srcCompat="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/harga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Harga"
+                android:textSize="12dp"
+                android:textStyle="bold|italic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.039"
+                app:layout_constraintStart_toEndOf="@+id/gambar"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.411"
+                tools:ignore="MissingConstraints"
+                tools:layout_conversion_absoluteHeight="19dp"
+                tools:layout_conversion_absoluteWidth="30dp" />
+
+            <Button
+                android:id="@+id/btn_beli"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="84dp"
+                android:text="Beli"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <Button
+                android:id="@+id/btn_detail"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="172dp"
+                android:text="Detail"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btn_beli"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+
+
+
+
+
+
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="id_produk" type="id" />
+    <item name="txtnama_produk" type="id" />
+    <item name="txtharga" type="id" />
+    <item name="txtstok" type="id" />
+</resources>

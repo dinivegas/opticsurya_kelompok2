@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="1dp"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="386dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01999998"
+        tools:layout_conversion_absoluteHeight="100dp"
+        tools:layout_conversion_absoluteWidth="408dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="77dp"
+            tools:layout_conversion_absoluteHeight="100dp"
+            tools:layout_conversion_absoluteWidth="408dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="20dp">
+
+
+            <TextView
+                android:id="@+id/nama_kategori"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama"
+                android:textSize="20dp"
+                android:textStyle="bold|italic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.335"
+                app:layout_constraintStart_toEndOf="@id/GambarProduk"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.488"
+                tools:ignore="MissingConstraints,UnknownId"
+                tools:layout_conversion_absoluteHeight="19dp"
+                tools:layout_conversion_absoluteWidth="30dp" />
+
+            <ImageView
+                android:id="@+id/GambarProduk"
+                android:layout_width="74dp"
+                android:layout_height="59dp"
+                android:src="@drawable/produk"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.051"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_conversion_absoluteHeight="62dp"
+                tools:layout_conversion_absoluteWidth="49dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_add"-->
+<!--        android:text="add"-->
+<!--        android:layout_width="60dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        tools:ignore="MissingConstraints"-->
+<!--        tools:layout_editor_absoluteX="326dp"-->
+<!--        tools:layout_editor_absoluteY="659dp" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
