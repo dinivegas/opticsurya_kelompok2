@@ -56,7 +56,7 @@ public class KategoriActivity extends AppCompatActivity {
         progressDialog.setMessage("Loading...");
         progressDialog.show();
 
-        String data_url = "http://192.168.43.146/katalog/kategori.php";
+        String data_url = "http://192.168.1.27/optik/kategori/kategori";
         StringRequest stringRequest = new StringRequest(Request.Method.GET, data_url,
                 new Response.Listener<String>() {
                     @Override
@@ -65,10 +65,11 @@ public class KategoriActivity extends AppCompatActivity {
                         Log.i(TAG,response);
                         try{
                             JSONObject jsonObject = new JSONObject(response);
-                            String status = jsonObject.getString("status");
-                            String error = jsonObject.getString("error");
-                            if (status.equals("200") && error.equals("false")){
-                                JSONArray jsonArray = jsonObject.getJSONArray("data");
+                            String success = jsonObject.getString("success");
+                            //String error = jsonObject.getString("error");
+                            JSONArray jsonArray = jsonObject.getJSONArray("data");
+                            if (success.equals("200")) {
+
                                 for (int i=0; i < jsonArray.length(); i++){
                                     JSONObject object = jsonArray.getJSONObject(i);
                                     String strId_kategori = object.getString("id_kategori").trim();
