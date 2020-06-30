@@ -39,4 +39,24 @@ $site = $this->konfigurasi_model->listing();
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/template/css/main.css">
 <!--===============================================================================================-->
 </head>
+<style type="text/css" media="screen">
+	.pagination a, .pagination b {
+		padding: 10px 20px;
+		text-decoration: none;
+		float: left;
+		border-radius: 50%;
+	}
+	.pagination a {
+		background-color: white;
+		color: black;
+	}
+	.pagination b {
+		background-color: black ;
+		color: white;
+	}
+	.pagination a:hover {
+		background-color: #eeeeee;
+	}
+	
+</style>
 <body class="animsition">

@@ -23,8 +23,8 @@ class Produk extends CI_Controller {
 		
 		$config['base_url'] 		= base_url().'produk/index/';
 		$config['total_rows']		= $total->total;
-		$config['use_page_number']	= TRUE;
-		$config['per_page'] 		= 3;
+		$config['use_page_numbers']	= TRUE;
+		$config['per_page'] 		= 6;
 		$config['uri_segment'] 		= 3;
 		$config['num_links'] 		= 5;
 		$config['full_tag_open'] 	= '<ul class="pagination">';
@@ -73,10 +73,10 @@ class Produk extends CI_Controller {
 		//pagination start
 		$this->load->library('pagination');
 		
-		$config['base_url'] 		= base_url().'produk/kategori/'.$slug_kategori.'/index';
+		$config['base_url'] 		= base_url().'produk/kategori/'.$slug_kategori.'/index/';
 		$config['total_rows']		= $total->total;
-		$config['use_page_number']	= TRUE;
-		$config['per_page'] 		= 1;
+		$config['use_page_numbers']	= TRUE;
+		$config['per_page'] 		= 3;
 		$config['uri_segment'] 		= 5;
 		$config['num_links'] 		= 5;
 		$config['full_tag_open'] 	= '<ul class="pagination">';

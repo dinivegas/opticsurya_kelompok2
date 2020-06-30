@@ -100,7 +100,7 @@ class Produk_model extends CI_Model {
 		return $query->row();
 	}
 	//kategori produk
-	public function kategori($limit,$start,$id_kategori)
+	public function kategori($id_kategori,$limit,$start)
 	{
 		$this->db->select('produk.*,
 						  user.nama,
