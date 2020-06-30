@@ -6,7 +6,7 @@
 </form>
 </div> -->
 
-<table class="table table-bordered" width="100%">
+<table class="table table-bordered" id="example1">
      <thead>
          <tr class="bg-secondary">
              <th>No</th>

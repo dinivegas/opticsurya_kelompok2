@@ -31,7 +31,7 @@ public class RegisterActivity extends AppCompatActivity {
     private Button btn_regist;
     private TextView link_regist;
     private ProgressBar loading;
-    private String URL_REGIST="http://192.168.43.112:8080/optikmobile/daftar.php";
+    private String URL_REGIST="http://192.168.1.6:8080/optikrestapi/daftar/daftar";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,6 +82,8 @@ public class RegisterActivity extends AppCompatActivity {
 
                             if (success.equals("1")) {
                                 Toast.makeText(RegisterActivity.this, "Register Success!", Toast.LENGTH_SHORT).show();
+                                finish();
+                                loading.setVisibility(View.GONE);
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();

@@ -55,7 +55,6 @@ public class SessionManager {
         pelanggan.put(ALAMAT, sharedPreferences.getString(ALAMAT, null));
         pelanggan.put(ID_PELANGGAN, sharedPreferences.getString(ID_PELANGGAN, null));
 
-
         return pelanggan;
     }
     public void logout(){
@@ -65,9 +64,5 @@ public class SessionManager {
         Intent i = new Intent(context, LoginActivity.class);
         context.startActivity(i);
         ((ProfileActivity) context).finish();
-
     }
-
-
-
 }
