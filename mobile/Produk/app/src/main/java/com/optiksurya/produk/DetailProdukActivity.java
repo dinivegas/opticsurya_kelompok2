@@ -55,7 +55,7 @@ public class DetailProdukActivity extends AppCompatActivity {
         progressDialog.show();
 
         Intent data = getIntent();
-        String data_url = "http://192.168.43.146/katalog/detail_kategori.php?id_kategori="+data.getStringExtra("id");
+        String data_url = "http://192.168.1.27/optik/det_kategori/det_kategori?id_kategori="+data.getStringExtra("id");
         StringRequest stringRequest = new StringRequest(Request.Method.GET, data_url,
                 new Response.Listener<String>() {
                     @Override
@@ -64,10 +64,10 @@ public class DetailProdukActivity extends AppCompatActivity {
                         Log.i(TAG,response);
                         try{
                             JSONObject jsonObject = new JSONObject(response);
-                            String status = jsonObject.getString("status");
-                            String error = jsonObject.getString("error");
-                            if (status.equals("200") && error.equals("false")){
-                                JSONArray jsonArray = jsonObject.getJSONArray("data");
+                            String success = jsonObject.getString("success");
+                           // String error = jsonObject.getString("error");
+                            if (success.equals("200")){
+                                JSONArray jsonArray = jsonObject.getJSONArray("detail");
                                 for (int i=0; i < jsonArray.length(); i++){
                                     JSONObject object = jsonArray.getJSONObject(i);
                                     String strId_produk = object.getString("id_produk").trim();
@@ -91,7 +91,7 @@ public class DetailProdukActivity extends AppCompatActivity {
                                     data.setNama_produk(strNama_produk);
                                     data.setHarga(strHarga);
                                     data.setStok(strStok);
-                                    data.setGambar("http://192.168.43.146/optik/assets/upload/image/thumbs/"+strGambar);
+                                    data.setGambar("http://192.168.1.27/optik/assets/upload/image/thumbs/"+strGambar);
 
                                     listModelProduk.add(data);
                                     //Toast.makeText(MhsActivity.this, strNim+"\n"+strNama+"\n"+strFoto+"\n\n", Toast.LENGTH_SHORT).show();
