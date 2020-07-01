@@ -145,7 +145,7 @@ class Dasbor extends CI_Controller {
 		if ($valid->run()) {
 		   //cek jika gambar diganti
 			if (!empty($_FILES['bukti_pembayaran']['name'])) {
-				$config['upload_path']		= './assets/upload/image/';
+				$config['upload_path']		= './assets/upload/images/';
 				$config['allowed_types']	= 'gif|jpg|png|jpeg';
 				$config['max_size']			= '2400';
 				$config['max_widht']		= '2024';
@@ -168,9 +168,9 @@ class Dasbor extends CI_Controller {
 			$upload_gambar = array('upload_data' => $this->upload->data());
 			//create tumbhnail
 			$config['image_library'] 	= 'gd2';
-			$config['source_image'] 	= './assets/upload/image/'.$upload_gambar['upload_data']['file_name'];
+			$config['source_image'] 	= './assets/upload/images/'.$upload_gambar['upload_data']['file_name'];
 			//lokasi folder thumbnail
-			$config['new_image']		= './assets/upload/image/thumbs/';
+			$config['new_image']		= './assets/upload/images/thumbs/';
 			$config['create_thumb'] 	= TRUE;
 			$config['maintain_ratio'] 	= TRUE;
 			$config['width']         	= 250;//pixel

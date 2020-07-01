@@ -120,7 +120,7 @@
 		                    <div class="col-md-3">
 		                    	<div class="form-group">
 		                    		<label>Provinsi</label>
-		                    		<select class="form-control" name="nama_provinsi">
+		                    		<select class="form-control" name="nama_provinsi" required>
 		                    			
 		                    		</select>
 		                    	</div>
@@ -128,7 +128,7 @@
 		                    <div class="col-md-3">
 		                    	<div class="form-group">
 		                    		<label>Kota</label>
-		                    		<select class="form-control" name="nama_kota">
+		                    		<select class="form-control" name="nama_kota" required>
 		               
 		                    		</select>
 		                    	</div>
@@ -136,7 +136,7 @@
 		                    <div class="col-md-3">
 		                    	<div class="form-group">
 		                    		<label>Ekspedisi</label>
-		                    		<select class="form-control" name="nama_ekspedisi">
+		                    		<select class="form-control" name="nama_ekspedisi" required>
 		               
 		                    		</select>
 		                    	</div>
@@ -144,7 +144,7 @@
 		                     <div class="col-md-3">
 		                    	<div class="form-group">
 		                    		<label>Tarif</label>
-		                    		<select class="form-control" name="nama_paket">
+		                    		<select class="form-control" name="nama_paket" required>
 		               
 		                    		</select>
 		                    	</div>

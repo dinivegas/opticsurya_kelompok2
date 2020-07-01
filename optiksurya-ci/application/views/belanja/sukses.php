@@ -9,7 +9,7 @@
     echo '</div>';
 }
 ?>
-<p class="alert alert-success">Terimakasih, produk yang Anda beli akan segera kami proses <a href="<?php echo base_url('masuk') ?>" class="btn btn-info"> Silahkan lakukan pembayaran </a></p>
+<p class="alert alert-success">Terimakasih, produk yang Anda beli akan segera kami proses <a href="<?php echo base_url('dasbor') ?>" class="btn btn-info"> Silahkan lakukan pembayaran </a></p>
 <div class="col-md-12">
 </div>
 

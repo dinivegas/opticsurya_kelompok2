@@ -45,7 +45,7 @@
 				</tr>
 				<tr>
 					<td>Bukti Pembayaran</td>
-					<td>: <?php if($detail_transaksi->bukti_pembayaran !="") { ?><img src="<?php echo base_url('/assets/upload/image/'.$detail_transaksi->bukti_pembayaran) ?>" class="img img-thumbnail" >
+					<td>: <?php if($detail_transaksi->bukti_pembayaran !="") { ?><img src="<?php echo base_url('/assets/upload/images/'.$detail_transaksi->bukti_pembayaran) ?>" class="img img-thumbnail" >
 					<?php }else{ echo 'Belum Ada Bukti Pembayaran'; } ?>
 					</td>
 				</tr>
