@@ -20,7 +20,7 @@ class Dasbor extends CI_Controller {
       $data2 = $this->Grafik_model->get_data()->result();
       $x['data'] = json_encode($data2);
 
-		$data = array(	'title' => 'Halaman Admin',
+		$data = array(	'title' => 'Halaman Admin | Grafik Penjualan',
 						'isi' 	=> 'admin/dasbor/list'
 						);
 		$this->load->view('admin/layout/wrapper', $data, FALSE);

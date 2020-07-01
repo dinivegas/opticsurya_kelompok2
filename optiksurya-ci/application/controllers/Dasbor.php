@@ -23,7 +23,7 @@ class Dasbor extends CI_Controller {
 		$detail_transaksi = $this->detail_transaksi_model->pelanggan($id_pelanggan);
 		$data = array('title'				=> 'Halaman Dashboard Pelanggan',
 					   'detail_transaksi'	=> $detail_transaksi,
-					   'isi'				=> 'dasbor/list'
+					   'isi'				=> 'dashboard/list'
 						);
 		$this->load->view('layout/wrapper', $data, FALSE);
 	}
@@ -37,7 +37,7 @@ class Dasbor extends CI_Controller {
 
 		$data = array('title'				=> 'Riwayat Belanja',
 					  'detail_transaksi'	=> $detail_transaksi,
-					  'isi'					=> 'dasbor/belanja'
+					  'isi'					=> 'dashboard/belanja'
 						);
 		$this->load->view('layout/wrapper', $data, FALSE);
 	}	
@@ -58,7 +58,7 @@ class Dasbor extends CI_Controller {
 		$data = array(  'title'				=> 'Riwayat Belanja',
 						'detail_transaksi'	=> $detail_transaksi,
 						'transaksi'			=> $transaksi,
-						'isi'				=> 'dasbor/detail'
+						'isi'				=> 'dashboard/detail'
 						);
 		$this->load->view('layout/wrapper', $data, FALSE);	
 	}
@@ -86,7 +86,7 @@ class Dasbor extends CI_Controller {
 
 		$data = array(  'title'				=> 'Profil Saya',
 					    'pelanggan'			=> $pelanggan,
-					    'isi'				=> 'dasbor/profil'
+					    'isi'				=> 'dashboard/profil'
 						);
 		$this->load->view('layout/wrapper', $data, FALSE);
 		//masuk databse
@@ -112,7 +112,7 @@ class Dasbor extends CI_Controller {
 		//emd data update
 			$this->pelanggan_model->edit($data);
 			$this->session->set_flashdata('sukses', 'Update Profil Berhasil');
-			redirect(base_url('dasbor/profil'),'refresh');		
+			redirect(base_url('dashboard/profil'),'refresh');		
 		}
 		//end masuk database	
 
@@ -145,7 +145,7 @@ class Dasbor extends CI_Controller {
 		if ($valid->run()) {
 		   //cek jika gambar diganti
 			if (!empty($_FILES['bukti_pembayaran']['name'])) {
-				$config['upload_path']		= './assets/upload/image/';
+				$config['upload_path']		= './assets/upload/images/';
 				$config['allowed_types']	= 'gif|jpg|png|jpeg';
 				$config['max_size']			= '2400';
 				$config['max_widht']		= '2024';
@@ -159,7 +159,7 @@ class Dasbor extends CI_Controller {
 					   'detail_transaksi' 	=> $detail_transaksi,
 					   'rekening'			=> $rekening,
 					   	'error'				=> $this->upload->display_errors(),
-					   'isi'				=> 'dasbor/konfirmasi'
+					   'isi'				=> 'dashboard/konfirmasi'
 					   );
 		$this->load->view('layout/wrapper', $data, FALSE);
 
@@ -168,9 +168,9 @@ class Dasbor extends CI_Controller {
 			$upload_gambar = array('upload_data' => $this->upload->data());
 			//create tumbhnail
 			$config['image_library'] 	= 'gd2';
-			$config['source_image'] 	= './assets/upload/image/'.$upload_gambar['upload_data']['file_name'];
+			$config['source_image'] 	= './assets/upload/images/'.$upload_gambar['upload_data']['file_name'];
 			//lokasi folder thumbnail
-			$config['new_image']		= './assets/upload/image/thumbs/';
+			$config['new_image']		= './assets/upload/images/thumbs/';
 			$config['create_thumb'] 	= TRUE;
 			$config['maintain_ratio'] 	= TRUE;
 			$config['width']         	= 250;//pixel
@@ -213,7 +213,7 @@ class Dasbor extends CI_Controller {
 							);
 			$this->detail_transaksi_model->edit($data);
 			$this->session->set_flashdata('sukses', 'Konfirmasi Pembayaran Berhasil');
-			redirect(base_url('dasbor'),'refresh');
+			redirect(base_url('dashboard'),'refresh');
 
 
 		}}
@@ -222,7 +222,7 @@ class Dasbor extends CI_Controller {
 		$data = array('title'				=> 'Konfirmasi pembayaran',
 					   'detail_transaksi' 	=> $detail_transaksi,
 					   'rekening'			=> $rekening,
-					   'isi'				=> 'dasbor/konfirmasi'
+					   'isi'				=> 'dashboard/konfirmasi'
 					   );
 		$this->load->view('layout/wrapper', $data, FALSE);
 	}

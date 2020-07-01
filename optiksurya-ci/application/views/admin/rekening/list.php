@@ -27,7 +27,7 @@ if ($this->session->flashdata('sukses'))
 		<tr>
 			<td><?php echo $no++ ?></td>
 			<td><?php echo $rekening->nama_bank?></td>
-			<td><?php echo $rekening->no_rekening ?></td>
+			<td><?php echo $rekening->nomor_rekening ?></td>
 			<td><?php echo $rekening->nama_pemilik ?></td>
 			<td>
 				<a href="<?php echo base_url('admin/rekening/edit/'.$rekening->id_rekening)?>" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i>Edit</a>
