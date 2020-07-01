@@ -14,9 +14,9 @@ import androidx.appcompat.widget.SearchView;
 
 public class MainActivity extends AppCompatActivity {
 
-    ListView listView;
-    String[] nameList = {"Kacamata", "Frame", "Lensa", "Gratis"};
-    ArrayAdapter<String> adapter;
+    //ListView listView;
+    //String[] nameList = {"Kacamata", "Frame", "Lensa", "Gratis"};
+    //ArrayAdapter<String> adapter;
     Context context;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,10 +29,9 @@ public class MainActivity extends AppCompatActivity {
         */
         setContentView(R.layout.activity_main);
 
-        listView = (ListView) findViewById(R.id.ListView);
-
-        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, nameList);
-        listView.setAdapter(adapter);
+        //listView = (ListView) findViewById(R.id.ListView);
+        //adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, nameList);
+        //listView.setAdapter(adapter);
 
     }
 
@@ -52,10 +51,10 @@ public class MainActivity extends AppCompatActivity {
             public boolean onQueryTextSubmit(String query) {
                 return false;
             }
-
+        //blok kode jika keyboard diketik
             @Override
             public boolean onQueryTextChange(String newText) {
-                adapter.getFilter().filter(newText);
+                //adapter.getFilter().filter(newText);
                 return true;
             }
         });
