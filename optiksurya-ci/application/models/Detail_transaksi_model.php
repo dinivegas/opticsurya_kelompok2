@@ -47,7 +47,7 @@ public function kd_transaksi($kd_transaksi)
  	$this->db->select('detail_transaksi.*,
 						pelanggan.nama_pelanggan,
 						rekening.nama_bank AS bank,
-						rekening.nomor_rekening,
+						rekening.no_rekening,
 						rekening.nama_pemilik,
 						SUM(transaksi.jumlah) AS total_item');
 	$this->db->from('detail_transaksi');

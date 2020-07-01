@@ -36,7 +36,7 @@
 				<tr class="table-row">
 					<td class="column-1">
 						<div class="cart-img-product b-rad-4 o-f-hidden">
-							<img src="<?php echo base_url('assets/upload/image/thumbs/'.$produk->gambar)?>" alt="IMG-PRODUCT">
+							<img src="<?php echo base_url('assets/upload/images/thumbs/'.$produk->gambar)?>" alt="IMG-PRODUCT">
 						</div>
 					</td>
 					<td class="column-2"><?php echo $keranjang['name'] ?></td>
@@ -120,7 +120,7 @@
 		                    <div class="col-md-3">
 		                    	<div class="form-group">
 		                    		<label>Provinsi</label>
-		                    		<select class="form-control" name="nama_provinsi">
+		                    		<select class="form-control" name="nama_provinsi" required>
 		                    			
 		                    		</select>
 		                    	</div>
@@ -128,7 +128,7 @@
 		                    <div class="col-md-3">
 		                    	<div class="form-group">
 		                    		<label>Kota</label>
-		                    		<select class="form-control" name="nama_kota">
+		                    		<select class="form-control" name="nama_kota" required>
 		               
 		                    		</select>
 		                    	</div>
@@ -136,7 +136,7 @@
 		                    <div class="col-md-3">
 		                    	<div class="form-group">
 		                    		<label>Ekspedisi</label>
-		                    		<select class="form-control" name="nama_ekspedisi">
+		                    		<select class="form-control" name="nama_ekspedisi" required>
 		               
 		                    		</select>
 		                    	</div>
@@ -144,7 +144,7 @@
 		                     <div class="col-md-3">
 		                    	<div class="form-group">
 		                    		<label>Tarif</label>
-		                    		<select class="form-control" name="nama_paket">
+		                    		<select class="form-control" name="nama_paket" required>
 		               
 		                    		</select>
 		                    	</div>
