@@ -36,8 +36,8 @@ public class ProfileActivity extends AppCompatActivity {
     SessionManager sessionManager;
     String getId_pelanggan;
 
-    private String URL="http://192.168.43.112:8080/optikmobile/read_detail.php";
-    private String URL_Edit="http://192.168.43.112:8080/optikmobile/edit.php";
+    private String URL="http://192.168.1.6:8080/optikrestapi/profile/readdetail";
+    private String URL_Edit="http://192.168.1.6:8080/optikrestapi/profile/edit";
     private Menu action;
 
 

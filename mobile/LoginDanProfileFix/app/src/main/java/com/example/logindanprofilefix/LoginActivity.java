@@ -32,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button btn_login;
     private TextView link_regist;
     private ProgressBar loading;
-    private static String URL_LOGIN = "http://192.168.43.112:8080/optikmobile/masuk.php";
+    private static String URL_LOGIN = "http://192.168.1.6:8080/optikrestapi/api_login/login";
     SessionManager sessionManager;
 
     @Override
@@ -109,7 +109,6 @@ public class LoginActivity extends AppCompatActivity {
                                     finish();
                                     loading.setVisibility(View.GONE);
 
-
                                 }
 
                             }
@@ -118,7 +117,7 @@ public class LoginActivity extends AppCompatActivity {
                             e.printStackTrace();
                             loading.setVisibility(View.GONE);
                             btn_login.setVisibility(View.VISIBLE);
-                            Toast.makeText(LoginActivity.this, "Error " +e.toString(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, "Password Atau Username Anda Salah", Toast.LENGTH_SHORT).show();
                         }
                     }
                 },
@@ -142,6 +141,5 @@ public class LoginActivity extends AppCompatActivity {
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
-
     }
 }
