@@ -23,7 +23,7 @@ class Dasbor extends CI_Controller {
 		$detail_transaksi = $this->detail_transaksi_model->pelanggan($id_pelanggan);
 		$data = array('title'				=> 'Halaman Dashboard Pelanggan',
 					   'detail_transaksi'	=> $detail_transaksi,
-					   'isi'				=> 'dashboard/list'
+					   'isi'				=> 'dasbor/list'
 						);
 		$this->load->view('layout/wrapper', $data, FALSE);
 	}
@@ -37,7 +37,7 @@ class Dasbor extends CI_Controller {
 
 		$data = array('title'				=> 'Riwayat Belanja',
 					  'detail_transaksi'	=> $detail_transaksi,
-					  'isi'					=> 'dashboard/belanja'
+					  'isi'					=> 'dasbor/belanja'
 						);
 		$this->load->view('layout/wrapper', $data, FALSE);
 	}	
@@ -58,7 +58,7 @@ class Dasbor extends CI_Controller {
 		$data = array(  'title'				=> 'Riwayat Belanja',
 						'detail_transaksi'	=> $detail_transaksi,
 						'transaksi'			=> $transaksi,
-						'isi'				=> 'dashboard/detail'
+						'isi'				=> 'dasbor/detail'
 						);
 		$this->load->view('layout/wrapper', $data, FALSE);	
 	}
@@ -86,7 +86,7 @@ class Dasbor extends CI_Controller {
 
 		$data = array(  'title'				=> 'Profil Saya',
 					    'pelanggan'			=> $pelanggan,
-					    'isi'				=> 'dashboard/profil'
+					    'isi'				=> 'dasbor/profil'
 						);
 		$this->load->view('layout/wrapper', $data, FALSE);
 		//masuk databse
@@ -112,7 +112,7 @@ class Dasbor extends CI_Controller {
 		//emd data update
 			$this->pelanggan_model->edit($data);
 			$this->session->set_flashdata('sukses', 'Update Profil Berhasil');
-			redirect(base_url('dashboard/profil'),'refresh');		
+			redirect(base_url('dasbor/profil'),'refresh');		
 		}
 		//end masuk database	
 
@@ -159,7 +159,7 @@ class Dasbor extends CI_Controller {
 					   'detail_transaksi' 	=> $detail_transaksi,
 					   'rekening'			=> $rekening,
 					   	'error'				=> $this->upload->display_errors(),
-					   'isi'				=> 'dashboard/konfirmasi'
+					   'isi'				=> 'dasbor/konfirmasi'
 					   );
 		$this->load->view('layout/wrapper', $data, FALSE);
 
@@ -213,7 +213,7 @@ class Dasbor extends CI_Controller {
 							);
 			$this->detail_transaksi_model->edit($data);
 			$this->session->set_flashdata('sukses', 'Konfirmasi Pembayaran Berhasil');
-			redirect(base_url('dashboard'),'refresh');
+			redirect(base_url('dasbor'),'refresh');
 
 
 		}}
@@ -222,7 +222,7 @@ class Dasbor extends CI_Controller {
 		$data = array('title'				=> 'Konfirmasi pembayaran',
 					   'detail_transaksi' 	=> $detail_transaksi,
 					   'rekening'			=> $rekening,
-					   'isi'				=> 'dashboard/konfirmasi'
+					   'isi'				=> 'dasbor/konfirmasi'
 					   );
 		$this->load->view('layout/wrapper', $data, FALSE);
 	}
