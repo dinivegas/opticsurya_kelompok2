@@ -3,14 +3,14 @@
 <section class="bgwhite p-t-55 p-b-65">
 <div class="container">
 <div class="row">
-	<div class="col-sm-6 col-md-4 col-lg-3 p-b-50">
+	<div class="col-sm-6 col-md-3 col-lg-3 p-b-50">
 		<div class="leftbar p-r-20 p-r-0-sm">
 			<!--  -->
 		<?php include ('menu.php') ?>
 	</div>
 	</div>
 
-	<div class="col-sm-6 col-md-8 col-lg-9 p-b-50">
+	<div class="col-sm-6 col-md-9 col-lg-9 p-b-50">
 	<!-- product -->
 	
 	<!-- <div class="alert alert-success"> -->
@@ -25,13 +25,13 @@
 
 		<table class="table table-bordered" width="100%">
 			<thead>
-				<tr class="bg-warning">
+				<tr class="bg-info">
 					<th>NO</th>
 					<th>KODE</th>
 					<th>TANGGAL</th>
 					<th>JUMLAH TOTAL</th>
 					<th>JUMLAH ITEM</th>
-					<th>STATUS</th>
+					<th>STATUS PEMBAYARAN</th>
 					<th>ACTION</th>
 				</tr>
 			</thead>
