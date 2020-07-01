@@ -24,7 +24,7 @@ class Simple_pelanggan
 			$this->CI->session->set_userdata('nama_pelanggan', $nama_pelanggan);
 			$this->CI->session->set_userdata('email', $email);
 			//redirect ke halaman admin
-			redirect(base_url('dashboard'),'refresh');
+			redirect(base_url('dasbor'),'refresh');
 
 			//kalau tidak ada data/ usernam/password salah
 		}else{
