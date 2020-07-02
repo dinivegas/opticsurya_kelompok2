@@ -11,21 +11,26 @@ class Dasbor extends CI_Controller {
 
 		//load model
 		$this->load->model('Grafik_model');
-
+		$this->load->model('Transaksi_model');
 	}
 	// halaman dashboard
 	public function index()
 	{
-
+	
       $data2 = $this->Grafik_model->get_data()->result();
       $x['data'] = json_encode($data2);
-
+	 
+		
+					
 		$data = array(	'title' => 'Halaman Admin | Grafik Penjualan',
+						'jml_transaksi' => $this->Transaksi_model->total_rows(),
 						'isi' 	=> 'admin/dasbor/list'
 						);
 		$this->load->view('admin/layout/wrapper', $data, FALSE);
 
 		$this->load->view('admin/dasbor/Grafik_view',$x);
+
+		
 	}
 	
 

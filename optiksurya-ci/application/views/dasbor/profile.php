@@ -25,7 +25,7 @@
                     //valiadasi error
                     echo validation_errors('<div class="alert alert-warning">','</div>');
                     //form open
-                    echo form_open(base_url('dashboard/profile'), 'class="leave-comment"'); ?>
+                    echo form_open(base_url('dasbor/profile'), 'class="leave-comment"'); ?>
                         <table class="table">
                             <thead>
                                 <tr>
