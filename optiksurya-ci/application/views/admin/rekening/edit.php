@@ -13,7 +13,7 @@ echo form_open(base_url('admin/rekening/edit/'.$rekening->id_rekening),' class="
 <div class="form-group row">
   <label class="col-md-2 col-form-label">Nomor Rekening</label>
     <div class="col-md-5">
-      <input type="number" name="nomor_rekening" class="form-control" placeholder="Nomor Rekening" value="<?php echo $rekening->nomor_rekening ?>" required>
+      <input type="number" name="no_rekening" class="form-control" placeholder="Nomor Rekening" value="<?php echo $rekening->no_rekening ?>" required>
     </div>
 </div>
 

@@ -34,7 +34,7 @@ class Rekening extends CI_Controller {
 		$valid->set_rules('nama_pemilik','Nama Pemilik Rekening','required',
 			array( 'required'	=> '%s harus diisi'));
 
-		$valid->set_rules('nomor_rekening','Nomor Rekening','required|is_unique[rekening.nomor_rekening]',
+		$valid->set_rules('no_rekening','Nomor Rekening','required|is_unique[rekening.no_rekening]',
 			array( 'required'	=> '%s harus diisi',
 				   'is_unique'	=> '%s rekening sudah tersedia. Silahkan buat nomor rekening baru !'));
 
@@ -48,7 +48,7 @@ class Rekening extends CI_Controller {
 		}else{
 			$i= $this->input;
 			$data= array(	'nama_bank' 		=> $i->post('nama_bank'),
-							'nomor_rekening'	=> $i->post('nomor_rekening'),
+							'no_rekening'		=> $i->post('no_rekening'),
 							'nama_pemilik' 		=> $i->post('nama_pemilik')
 							);
 			$this->rekening_model->tambah($data);
@@ -77,7 +77,7 @@ class Rekening extends CI_Controller {
 			$i= $this->input;
 			$data= array(	'id_rekening'		=> $id_rekening,
 							'nama_bank' 		=> $i->post('nama_bank'),
-							'nomor_rekening'	=> $i->post('nomor_rekening'),
+							'no_rekening'		=> $i->post('no_rekening'),
 							'nama_pemilik' 		=> $i->post('nama_pemilik')
 							);
 			$this->rekening_model->edit($data);
