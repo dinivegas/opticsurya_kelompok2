@@ -21,7 +21,7 @@ class Berita extends CI_Controller {
 		
 		$config['base_url'] 		= base_url().'berita/index/';
 		$config['total_rows']		= $total->total;
-		$config['use_page_number']	= TRUE;
+		$config['use_page_numbers']	= TRUE;
 		$config['per_page'] 		= 3;
 		$config['uri_segment'] 		= 3;
 		$config['num_links'] 		= 5;

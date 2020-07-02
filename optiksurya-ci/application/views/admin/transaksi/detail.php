@@ -49,7 +49,7 @@
     </tr>
     <tr>
         <td>Pembayaran ke Rekening</td>
-        <td>: <?php echo $detail_transaksi->bank ?> No. Rekening <?php echo $detail_transaksi->nomor_rekening ?> a.n <?php echo $detail_transaksi->nama_pemilik ?></td>
+        <td>: <?php echo $detail_transaksi->bank ?> No. Rekening <?php echo $detail_transaksi->no_rekening ?> a.n <?php echo $detail_transaksi->nama_pemilik ?></td>
     </tr>
 </tbody>
 </table>
