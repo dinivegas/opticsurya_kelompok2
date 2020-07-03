@@ -14,7 +14,7 @@ class Transaksi extends CI_Controller {
 	public function index()
 	{
 		$detail_transaksi = $this->detail_transaksi_model->listing();
-	    $data = array(	'title' 			=> 'Data Transaksi',
+		$data = array(	'title' 			=> 'Data Transaksi',
 					    'detail_transaksi'	=>  $detail_transaksi,
 					    'isi'				=> 'admin/transaksi/list'
 				);
@@ -104,7 +104,12 @@ class Transaksi extends CI_Controller {
 		$mpdf->Output($nama_file_pdf, 'I');
 
 	}
-
+	public function get_tot(){
+		$tot = $this->Transaksi_model->toral_rows();
+		$resut['tot'] = $tot;
+		$resut['msg'] = "Berhasil di Refresh secara realtime";
+		echo json_encode($resut);
+	}
 }
 
 /* End of file Transaksi.php */

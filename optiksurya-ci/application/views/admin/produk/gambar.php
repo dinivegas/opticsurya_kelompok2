@@ -68,9 +68,9 @@ if ($this->session->flashdata('sukses'))
 				<img src="<?Php echo base_url('assets/upload/images/thumbs/'.$gambar->gambar)?>" class="img img-responsive img-thumbnail" width="60">
 			</td>
 			<td><?php echo $gambar->judul_gambar ?></td>
-			<td>
-				<a href="<?php echo base_url('admin/produk/delete_gambar/'.$produk->id_produk.'/'.$gambar->id_gambar) ?>" class="btn btn-danger btn-xs" onclick="return confirm('Yakin Ingin Menghapus Gambar Ini ? ')"><i class="fa fa-trash"></i> Hapus</a>
-			</td>
+			<!-- <td>
+				<a href="<?php //echo base_url('admin/produk/delete_gambar/'.$produk->id_produk.'/'.$gambar->id_gambar) ?>" class="btn btn-danger btn-xs" onclick="return confirm('Yakin Ingin Menghapus Gambar Ini ? ')"><i class="fa fa-trash"></i> Hapus</a>
+			</td> -->
 		</tr>
 		<?php $no++; } ?>
 	</tbody>

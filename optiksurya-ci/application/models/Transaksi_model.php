@@ -81,6 +81,17 @@ class Transaksi_model extends CI_Model {
 		$this->db->where('id_transaksi', $data['id_transaksi']);
 		$this->db->delete('transaksi', $data);
 	}
+	//notif
+	public function total_rows($q = NULL)
+	{
+		$this->db->like('id_transaksi', $q);
+		$this->db->or_like('kd_transaksi', $q);
+		$this->db->or_like('harga', $q);
+		$this->db->or_like('total_harga', $q);
+		$this->db->or_like('tgl_transaksi', $q);
+		$this->db->from('transaksi');
+		return $this->db->count_all_results();
+	}
 		
 
 }

@@ -13,7 +13,6 @@
 </html>
 
 <br> -->
-
 <?php
   $this->load->view('admin/dasbor/Grafik_view');
 ?>

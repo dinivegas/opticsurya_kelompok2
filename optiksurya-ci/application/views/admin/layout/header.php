@@ -1,3 +1,4 @@
+
 <header class="main-header">
     <!-- Logo -->
     <a href="<?php echo base_url()?>" class="logo">
@@ -22,42 +23,17 @@
         <li class="dropdown notifications-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-bell-o"></i>
-              <span class="label label-warning"></span>
+              <span class="label label-warning"><?php $jml_transaksi ?></span>
             </a>
             <ul class="dropdown-menu">
-              <li class="header">You have 10 notifications</li>
+              <li class="header">You have 0 notifications</li>
               <li>
                 <!-- inner menu: contains the actual data -->
                 <ul class="menu">
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-users text-aqua"></i> 5 new members joined today
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the
-                      page and may cause design problems
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-users text-red"></i> 5 new members joined
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-shopping-cart text-green"></i> 25 sales made
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-user text-red"></i> You changed your username
-                    </a>
-                  </li>
+                
                 </ul>
               </li>
-              <li class="footer"><a href="#">View all</a></li>
+              <li class="footer"><a href="#"></a>View All</li>
             </ul>
           </li>
           <!-- User Account: style can be found in dropdown.less -->
@@ -72,17 +48,15 @@
                 <img src="<?php echo base_url()?>assets/admin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
-                  <?php echo $this->session->userdata('nama');?> - <?php echo $this->session->userdata('akses_level');?>
+                 ADMIN
                   <small><?php echo date('d M Y');?></small>
                 </p>
               </li>
               <!-- Menu Footer-->
               <li class="user-footer">
-                <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Profile</a>
-                </div>
+
                 <div class="pull-right">
-                  <a href="<?php echo base_url('login/logout')?>" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="<?php echo base_url('login/logout')?>" class="btn btn-default btn-flat">Log out</a>
                 </div>
               </li>
             </ul>
@@ -92,3 +66,17 @@
       </div>
     </nav>
   </header>
+  <script type="text/javascript">
+  $document.ready(function(){
+    $.ajax({
+      url:"<?=base_url()?>admin/transaksi/get_tot",
+      type:"POST",
+      dataType:"json",
+      data:{},
+      succes:function(data) {
+        alert(data.tot);
+      }
+
+    })
+  }
+  </script>

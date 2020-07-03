@@ -128,7 +128,7 @@
 		         <th>Nama Produk</th>
 		         <th>Jumlah</th>
 		         <th>Harga</th>
-		         <th>Subtotal</th>
+		         <th>Total Harga</th>
 		     </tr>
 		 </thead>
 		 <tbody>

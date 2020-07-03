@@ -35,8 +35,7 @@ class Registrasi extends CI_Controller {
 		//masuk databse
 		}else{
 			$i= $this->input;
-			$data= array(	'status_pelanggan' 	=> 'Pending',
-							'nama_pelanggan'	=> $i->post('nama_pelanggan'),
+			$data= array(	'nama_pelanggan'	=> $i->post('nama_pelanggan'),
 							'email' 			=> $i->post('email'),
 							'password' 			=> SHA1($i->post('password')),
 							'telepon' 			=> $i->post('telepon'),

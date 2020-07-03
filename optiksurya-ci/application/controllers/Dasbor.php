@@ -64,7 +64,7 @@ class Dasbor extends CI_Controller {
 	}
 
 	//profil
-	public function profil()
+	public function profile()
 	{
 		$id_pelanggan 	= $this->session->userdata('id_pelanggan');
 		$pelanggan 		= $this->pelanggan_model->detail($id_pelanggan);
@@ -86,7 +86,7 @@ class Dasbor extends CI_Controller {
 
 		$data = array(  'title'				=> 'Profil Saya',
 					    'pelanggan'			=> $pelanggan,
-					    'isi'				=> 'dasbor/profil'
+					    'isi'				=> 'dasbor/profile'
 						);
 		$this->load->view('layout/wrapper', $data, FALSE);
 		//masuk databse
@@ -112,7 +112,7 @@ class Dasbor extends CI_Controller {
 		//emd data update
 			$this->pelanggan_model->edit($data);
 			$this->session->set_flashdata('sukses', 'Update Profil Berhasil');
-			redirect(base_url('dasbor/profil'),'refresh');		
+			redirect(base_url('dasbor/profile'),'refresh');		
 		}
 		//end masuk database	
 

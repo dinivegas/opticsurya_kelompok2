@@ -41,7 +41,7 @@ $nav_produk_mobile  = $this->konfigurasi_model->nav_produk();
 			<!-- Header Icon -->
 			<div class="header-icons">
 				<?php if($this->session->userdata('email')) { ?>
-					<a href="<?php echo base_url('dashboard') ?>" class="header-wrapicon1 dis-block">
+					<a href="<?php echo base_url('dasbor') ?>" class="header-wrapicon1 dis-block">
 					<img src="<?php echo base_url() ?>assets/template/images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
 					<?php echo $this->session->userdata('nama_pelanggan'); ?>&nbsp;
 					</a>

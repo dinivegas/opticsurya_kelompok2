@@ -5,7 +5,7 @@ class Grafik extends CI_Controller{
     function __construct(){
       parent::__construct();
       //load chart_model from model
-      $this->load->model('Grafik_model');
+      $this->load->model('grafik_model');
     }
  
     function index(){
