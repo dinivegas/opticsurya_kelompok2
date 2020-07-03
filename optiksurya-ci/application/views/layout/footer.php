@@ -1,166 +1,59 @@
-	<footer class="bg6 p-t-45 p-b-43 p-l-45 p-r-45">
-		<div class="flex-w p-b-90">
-			<div class="w-size6 p-t-30 p-l-15 p-r-15 respon3">
-				<h4 class="s-text12 p-b-30">
-					GET IN TOUCH
-				</h4>
-
+<!-- Footer -->
+	<?php $nav_produk         = $this->konfigurasi_model->nav_produk();?>
+	<footer class="bg6 p-t-30 p-b-43 p-l-30 p-r-30">
+		<div class="flex-w p-b-80">
+			<div class="w-size6 p-t-30 p-l-60 p-r-15 respon3">
 				<div>
-					<p class="s-text7 w-size27">
-						Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
-					</p>
-
 					<div class="flex-m p-t-30">
-						<a href="#" class="fs-18 color1 p-r-20 fa fa-facebook"></a>
-						<a href="#" class="fs-18 color1 p-r-20 fa fa-instagram"></a>
-						<a href="#" class="fs-18 color1 p-r-20 fa fa-pinterest-p"></a>
-						<a href="#" class="fs-18 color1 p-r-20 fa fa-snapchat-ghost"></a>
-						<a href="#" class="fs-18 color1 p-r-20 fa fa-youtube-play"></a>
+						
 					</div>
 				</div>
 			</div>
 
 			<div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
 				<h4 class="s-text12 p-b-30">
-					Categories
+					Alamat
 				</h4>
 
-				<ul>
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Men
-						</a>
-					</li>
-
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Women
-						</a>
-					</li>
-
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-						Accesories
-						</a>
-					</li>
-
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Sunglasses
-						</a>
-					</li>
-				</ul>
+				<p class="s-text7 w-size50">
+						<?php echo $site->alamat ?>
+					</p>
 			</div>
 
-			<div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
+			<div class="w-size7 p-t-30 p-l-15 p-r-15 respon5">
 				<h4 class="s-text12 p-b-30">
-					Links
+					Tentang
 				</h4>
 
-				<ul>
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Search
-						</a>
-					</li>
-
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							About Us
-						</a>
-					</li>
-
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Contact Us
-						</a>
-					</li>
-
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Returns
-						</a>
-					</li>
-				</ul>
-			</div>
-
-			<div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
-				<h4 class="s-text12 p-b-30">
-					Help
-				</h4>
-
-				<ul>
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Track Order
-						</a>
-					</li>
-
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Returns
-						</a>
-					</li>
-
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Shipping
-						</a>
-					</li>
-
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							FAQs
-						</a>
-					</li>
-				</ul>
+				<p class="s-text7 w-size27">
+						Optik Surya Merupakan Aplikasi Penjualan Yang Khusus Menjual Kacamata
+				</p>
 			</div>
 
 			<div class="w-size8 p-t-30 p-l-15 p-r-15 respon3">
 				<h4 class="s-text12 p-b-30">
-					Newsletter
+					Hubungi Kami
 				</h4>
 
 				<form>
-					<div class="effect1 w-size9">
-						<input class="s-text7 bg6 w-full p-b-5" type="text" name="email" placeholder="email@example.com">
-						<span class="effect1-line"></span>
-					</div>
-
-					<div class="w-size2 p-t-20">
-						<!-- Button -->
-						<button class="flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
-							Subscribe
-						</button>
-					</div>
-
+					<p class="s-text7 w-size27">
+						<a href="https://api.whatsapp.com/send?phone=6281235875874&text=Hai%20Produk%20Ini%20Ready%20?"><img src="<?= base_url('assets/upload/slide/wa.png') ?>"> Whatsapp</a>
+					</p>
+					<br>
+					<p class="s-text7 w-size27">
+						<img src="<?= base_url('assets/upload/slide/email.png') ?>"> <?php echo $site->email ?>
+					</p>
+					<br>
+					 <p class="s-text7 w-size27">
+						<img src="<?= base_url('assets/upload/slide/telpon.png') ?>"> <?php echo $site->telepon ?>
+					</p>
 				</form>
 			</div>
 		</div>
 
 		<div class="t-center p-l-15 p-r-15">
-			<a href="#">
-				<img class="h-size2" src="<?php echo base_url() ?>assets/template/images/icons/paypal.png" alt="IMG-PAYPAL">
-			</a>
-
-			<a href="#">
-				<img class="h-size2" src="<?php echo base_url() ?>assets/template/images/icons/visa.png" alt="IMG-VISA">
-			</a>
-
-			<a href="#">
-				<img class="h-size2" src="<?php echo base_url() ?>assets/template/images/icons/mastercard.png" alt="IMG-MASTERCARD">
-			</a>
-
-			<a href="#">
-				<img class="h-size2" src="<?php echo base_url() ?>assets/template/images/icons/express.png" alt="IMG-EXPRESS">
-			</a>
-
-			<a href="#">
-				<img class="h-size2" src="<?php echo base_url() ?>assets/template/images/icons/discover.png" alt="IMG-DISCOVER">
-			</a>
-
 			<div class="t-center s-text8 p-t-20">
-				Copyright © 2018 All rights reserved. | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+				Copyright © 2020 <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Optik Surya</a>
 			</div>
 		</div>
 	</footer>
@@ -221,6 +114,12 @@
 
 <!--===============================================================================================-->
 	<script src="<?php echo base_url() ?>assets/template/js/main.js"></script>
+	<script src="<?php echo base_url() ?>assets/template/js/jquery.min.js"></script>
+	<!-- <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script> -->
+
 
 </body>
 </html>
