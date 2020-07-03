@@ -48,12 +48,13 @@
                 <img src="<?php echo base_url()?>assets/admin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
-                  <?php echo $this->session->userdata('nama');?> - <?php echo $this->session->userdata('akses_level');?>
+                 ADMIN
                   <small><?php echo date('d M Y');?></small>
                 </p>
               </li>
               <!-- Menu Footer-->
               <li class="user-footer">
+
                 <div class="pull-right">
                   <a href="<?php echo base_url('login/logout')?>" class="btn btn-default btn-flat">Log out</a>
                 </div>
