@@ -19,6 +19,7 @@ if ($this->session->flashdata('sukses'))
 			<th>Gambar</th>
 			<th>Nama</th>
 			<th>Kategori</th>
+			<th>Stok</th>
 			<th>Harga</th>
 			<th>Status</th>
 			<th>Action</th>
@@ -33,6 +34,7 @@ if ($this->session->flashdata('sukses'))
 			</td>
 			<td><?php echo $produk->nama_produk ?></td>
 			<td><?php echo $produk->nama_kategori ?></td>
+			<td><?php echo $produk->stok ?></td>
 			<td>Rp. <?php echo number_format($produk->harga,'0',',','.') ?></td>
 			<td><?php echo $produk->status_produk ?></td>
 			<td>
