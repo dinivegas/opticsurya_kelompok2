@@ -9,7 +9,7 @@
     echo '</div>';
 }
 ?>
-<p class="alert alert-success">Registrasi berhasil ! Silahkan <a href="<?php echo base_url('masuk') ?>" class="btn btn-info btn-sm"> Log In di sini</a> Anda juga bisa melakukan Check Out <a href="<?php echo base_url('belanja/checkout') ?>" class="btn btn-warning btn-sm"><i class="fa fa-shopping-cart"></i> Check Out</a></p>
+<p class="alert alert-success text-center">Registrasi berhasil ! Silahkan <a href="<?php echo base_url('masuk') ?>" class="btn btn-info btn-sm"> Log In di sini</a></p>
 <div class="col-md-12">
 
 	
